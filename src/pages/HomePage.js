@@ -2,6 +2,8 @@ import HomePageContainer from '../styles/pages/HomePageContainer';
 
 import { breakpointWidth1024 } from '../styles/variables';
 
+import Navbar from '../components/Navbar';
+
 const HomePage = () => {
   return (
     <HomePageContainer>
@@ -15,6 +17,7 @@ const HomePage = () => {
           alt="Background picture. Desktop with a desktop computer"
         />
       </picture>
+      <Navbar />
     </HomePageContainer>
   );
 }
