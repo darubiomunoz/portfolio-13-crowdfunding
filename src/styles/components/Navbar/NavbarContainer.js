@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { spacingSmall, spacingRegular, zIndexNormal } from '../variables';
+import { spacingSmall, spacingRegular, zIndexNormal } from '../../variables';
 
 const NavbarContainer = styled.section`
   width: 100%;
   height: auto;
-  padding: ${spacingRegular} ${spacingSmall};
+  padding: ${spacingRegular};
   display: flex;
   justify-content: space-between;
   position: absolute;
