@@ -1,5 +1,13 @@
+import NavbarContainer from '../styles/components/NavbarContainer';
+
+import logo from "../assets/logos/logo.svg";
+
 const Navbar = () => {
-  return (<h1>Navbar</h1>);
+  return (
+    <NavbarContainer>
+      <img src={logo} alt="" />
+    </NavbarContainer>
+  );
 }
 
 export default Navbar;
