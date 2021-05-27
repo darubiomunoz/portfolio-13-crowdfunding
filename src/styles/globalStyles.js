@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { fontFamily } from './variables'
+import { fontFamily, colorOption4 } from './variables'
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -9,6 +9,16 @@ const GlobalStyle = createGlobalStyle`
   font-size: 62.5%;
   font-family: fontFamily;
   box-sizing: border-box;
+
+  ul,
+  ol {
+    list-style: none;
+    text-decoration: none;
+  }
+
+  a {
+    color: ${colorOption4};
+  }
 }
 `;
 
