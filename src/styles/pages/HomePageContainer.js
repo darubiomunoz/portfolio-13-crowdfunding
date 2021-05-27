@@ -11,9 +11,11 @@ const HomePageContainer = styled.main`
 
   picture {
     width: 100%;
+    height: auto;
 
     img {
-      width: 100%;
+      width: inherit;
+      height: inherit;
     }
   }
 `;
