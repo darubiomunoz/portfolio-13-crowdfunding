@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { nanoid } from '@reduxjs/toolkit';
 
 import NavbarContainer from '../styles/components/Navbar/NavbarContainer';
@@ -30,12 +31,12 @@ const Navbar = () => {
             alt="Burger Icon. Press enter to open the navigation menu"
           />
         </figure>
-        <Dropdown>
+        <Dropdown isOpen={isOpen}>
           <ul>
             {navigationOptions.map((option) => {
               return (
                 <li key={nanoid()}>
-                  <a href="">{option}</a>
+                  <Link href="">{option}</Link>
                 </li>
               );
             })}
