@@ -10,6 +10,8 @@ import closeIcon from '../assets/icons/icon-close-menu.svg'
 const Navbar = () => {
   const [ isOpen, setIsOpen ] = useState(false);
 
+  const navigationOptions = ["About", "Discover", "Get Started"];
+
   const handleClick = () => {
     setIsOpen(!isOpen);
   }
