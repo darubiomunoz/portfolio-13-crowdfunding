@@ -6,6 +6,9 @@ const HomePageContainer = styled.main`
   width:100%;
   max-width: 100vw;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   z-index: ${zIndexBackground};
 
