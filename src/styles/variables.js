@@ -72,7 +72,7 @@ export const borderRadiusNormal = `30px`;
 export const borderRadiusLarge = `40px`;
 export const borderRadiusExtraLarge = `50px`;
 
-export const boxShadow = `0px 3px 10px 0px rgba(173,164,164,0.5);`;
+export const boxShadow = `0px 0px 0px 1px rgba(173,164,164,0.1);`;
 
 export const zIndexBackground = `0`;
 export const zIndexNormal = `10`;
