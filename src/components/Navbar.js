@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { nanoid } from '@reduxjs/toolkit';
 
@@ -12,12 +12,25 @@ import closeIcon from '../assets/icons/icon-close-menu.svg'
 
 const Navbar = () => {
   const [ isOpen, setIsOpen ] = useState(false);
+  const dropdownMenu = useRef();
+  const menuIcon = useRef();
 
   const navigationOptions = ["About", "Discover", "Get Started"];
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   }
+
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (!dropdownMenu.current.contains(event.target) && !menuIcon.current.contains(event.target)) setIsOpen(false);
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <NavbarContainer>
@@ -29,9 +42,10 @@ const Navbar = () => {
           <img
             src={!isOpen ? burgerIcon : closeIcon}
             alt="Burger Icon. Press enter to open the navigation menu"
+            ref={menuIcon}
           />
         </figure>
-        <Dropdown isOpen={isOpen}>
+        <Dropdown isOpen={isOpen} ref={dropdownMenu}>
           <ul>
             {navigationOptions.map((option) => {
               return (
