@@ -1,10 +1,12 @@
 import ProjectDescriptionContainer from "../styles/components/ProjectDescription/ProjectDescriptionContainer";
 
+import mastercraftLogo from '../assets/logos/logo-mastercraft.svg';
+
 const ProjectDescription = () => {
   return (
     <ProjectDescriptionContainer>
       <figure>
-        <img src="" alt="" />
+        <img src={mastercraftLogo} alt="Mastercraft logotype" />
       </figure>
       <article>
         <h1>Mastercraft Bamboo Monitor Riser</h1>
