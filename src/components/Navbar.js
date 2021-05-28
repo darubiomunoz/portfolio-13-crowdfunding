@@ -35,8 +35,8 @@ const Navbar = () => {
           <ul>
             {navigationOptions.map((option) => {
               return (
-                <li key={nanoid()}>
-                  <Link href="">{option}</Link>
+                <li key={nanoid()} border={option}>
+                  <Link to={`#${option}`}>{option}</Link>
                 </li>
               );
             })}

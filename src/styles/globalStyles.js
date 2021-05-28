@@ -7,16 +7,16 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   font-size: 62.5%;
-  font-family: fontFamily;
+  font-family: ${fontFamily};
   box-sizing: border-box;
 
   ul,
   ol {
     list-style: none;
-    text-decoration: none;
   }
 
   a {
+    text-decoration: none;
     color: ${colorOption4};
   }
 }
