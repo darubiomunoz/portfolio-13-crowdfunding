@@ -3,6 +3,7 @@ import HomePageContainer from '../styles/pages/HomePageContainer';
 import { breakpointWidth1024 } from '../styles/variables';
 
 import Navbar from '../components/Navbar';
+import ProjectDescription from '../components/ProjectDescription';
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
         />
       </picture>
       <Navbar />
+      <ProjectDescription />
     </HomePageContainer>
   );
 }
