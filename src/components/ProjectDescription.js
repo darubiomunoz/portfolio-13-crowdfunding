@@ -5,7 +5,7 @@ import bookmarkIcon from '../assets/icons/icon-bookmark.svg';
 
 const ProjectDescription = () => {
   return (
-    <ProjectDescriptionContainer>
+    <ProjectDescriptionContainer id="About">
       <figure>
         <img src={mastercraftLogo} alt="Mastercraft logotype" />
       </figure>

@@ -9,7 +9,7 @@ import {
   zIndexDropdown
 } from "../../variables";
 
-const Dropdown = styled.div`
+const Dropdown = styled.nav`
   display: ${(props) => (props.isOpen ? "flex" : "none")};
   justify-content: ${(props) => (props.isOpen ? "center" : "unset")};
   width: 100%;
