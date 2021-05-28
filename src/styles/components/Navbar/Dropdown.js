@@ -5,7 +5,8 @@ import {
   borderRadiusSmall,
   colorOption5,
   fontSizeRegular,
-  fontWeightBold
+  fontWeightBold,
+  zIndexDropdown
 } from "../../variables";
 
 const Dropdown = styled.div`
@@ -16,6 +17,7 @@ const Dropdown = styled.div`
   position: absolute;
   top: 50px;
   left: 0;
+  z-index: ${zIndexDropdown};
   background-color: transparent;
 
   ul {

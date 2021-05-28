@@ -76,7 +76,7 @@ export const boxShadow = `0px 3px 10px 0px rgba(173,164,164,0.5);`;
 
 export const zIndexBackground = `0`;
 export const zIndexNormal = `10`;
-export const zIndexDropDown = `1000`;
+export const zIndexDropdown = `1000`;
 export const zIndexSticky = `1010`;
 export const zIndexFixed = `1020`;
 export const zIndexModalBackDrop = `1030`;
