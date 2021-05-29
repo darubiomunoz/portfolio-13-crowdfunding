@@ -5,6 +5,8 @@ import { borderRadiusSmall, boxShadow, colorOption3, fontSizeRegular, fontSizeSm
 const AboutContainer = styled.section`
   width: 87%;
   padding: ${spacingRegular} ${spacingSmall};
+  display: flex;
+  flex-direction: column;
   border-radius: ${borderRadiusSmall};
   box-shadow: ${boxShadow};
 
