@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const API_URL = "https://api.jsonbin.io/b/60b2cbcd44f488301b80b256";
 
@@ -8,11 +8,37 @@ const initialState = {
   error: null
 };
 
+export const fetchData = createAsyncThunk(
+  "data/fetchData",
+  async () => {
+    const response = await fetch(API_URL);
+    if(!response.ok) console.error(response.status);
+    const data = response.json();
+    return data;
+  }
+);
+
 export const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {},
-  extraReducers: {}
+  extraReducers: {
+    [fetchData.pending]: state => {
+      state.status = "pending";
+    },
+    [fetchData.fulfilled]: (state, action) => {
+      const { payload } = action;
+
+      state.status = "fulfilled";
+      state.data = state.data.concat(payload);
+    },
+    [fetchData.rejected]: (state, action) => {
+      const { error } = action;
+
+      state.status = "rejected";
+      state.error = error.message;
+    }
+  }
 });
 
 export default dataSlice.reducer;
