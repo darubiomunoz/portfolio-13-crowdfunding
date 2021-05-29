@@ -1,5 +1,7 @@
 import AboutContainer from '../styles/components/About/AboutContainer';
 
+import Plan from './Plan';
+
 const About = () => {
   return (
     <AboutContainer>
@@ -16,6 +18,7 @@ const About = () => {
         desk space below your computer to allow notepads, pens, and USB stikcs
         to be stored under the stand.
       </p>
+      <Plan />
     </AboutContainer>
   );
 }
