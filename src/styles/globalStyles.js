@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   font-size: 62.5%;
   font-family: ${fontFamily};
+  line-height: 1.55rem;
   box-sizing: border-box;
 
   ul,
