@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { zIndexBackground } from '../variables';
+import { spacingRegular, zIndexBackground } from '../variables';
 
 const HomePageContainer = styled.main`
   width:100%;
@@ -9,6 +9,7 @@ const HomePageContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: ${spacingRegular};
   position: relative;
   z-index: ${zIndexBackground};
 
