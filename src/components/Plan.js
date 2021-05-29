@@ -1,5 +1,11 @@
+import PlanContainer from '../styles/components/Plan/PlanContainer';
+
 const Plan = () => {
-  return (<h1>PLAN</h1>);
+  return (
+    <PlanContainer>
+      wena wena
+    </PlanContainer>
+  );
 }
 
 export default Plan;
