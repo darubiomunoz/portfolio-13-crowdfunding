@@ -5,6 +5,7 @@ import { breakpointWidth1024 } from '../styles/variables';
 import Navbar from '../components/Navbar';
 import ProjectDescription from '../components/ProjectDescription';
 import ProjectStatistics from '../components/ProjectStatistics';
+import About from '../components/About';
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
       <Navbar />
       <ProjectDescription />
       <ProjectStatistics />
+      <About />
     </HomePageContainer>
   );
 }
