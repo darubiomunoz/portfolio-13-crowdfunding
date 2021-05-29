@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const API_URL = "https://api.jsonbin.io/b/60b2cbcd44f488301b80b256";
+
 const initialState = {
   data: [],
   status: "idle",
