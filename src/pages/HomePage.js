@@ -1,4 +1,9 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import HomePageContainer from '../styles/pages/HomePageContainer';
+
+import { fetchData } from '../features/data/dataSlice';
 
 import { breakpointWidth1024 } from '../styles/variables';
 
@@ -8,6 +13,13 @@ import ProjectStatistics from '../components/ProjectStatistics';
 import About from '../components/About';
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  const dataStatus = useSelector(state => state.data.status);
+
+  useEffect(() => {
+    if (dataStatus === "idle") dispatch(fetchData());
+  }, [dataStatus, dispatch]);
+
   return (
     <HomePageContainer>
       <picture>

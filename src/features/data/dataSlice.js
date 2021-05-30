@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const API_URL = "https://api.jsonbin.io/b/60b2cbcd44f488301b80b256";
+const API_URL = "https://api.jsonbin.io/b/60b2d58344f488301b80b9e3";
 
 const initialState = {
   data: [],
