@@ -9,6 +9,8 @@ const ProjectStatisticsContainer = styled.section`
   flex-direction: column;
   row-gap: ${spacingSmall};
   align-items: center;
+  position: relative;
+  top: -50px;
   border-radius: ${borderRadiusSmall};
   background-color: ${colorOption5};
   box-shadow: ${boxShadow};
