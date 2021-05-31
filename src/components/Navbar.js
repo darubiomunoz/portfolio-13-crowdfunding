@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { nanoid } from '@reduxjs/toolkit';
 
@@ -14,8 +15,7 @@ const Navbar = () => {
   const [ isOpen, setIsOpen ] = useState(false);
   const dropdownMenu = useRef();
   const menuIcon = useRef();
-
-  const navigationOptions = ["About", "Discover", "Get Started"];
+  const navigation = useSelector(state => state.data.info[0].navbar.navigation);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -46,15 +46,15 @@ const Navbar = () => {
           />
         </figure>
         <Dropdown isOpen={isOpen} ref={dropdownMenu}>
-          <ul>
-            {navigationOptions.map((option) => {
+          {<ul>
+            {navigation.map((option) => {
               return (
                 <li key={nanoid()} border={option}>
                   <Link to={`#${option}`}>{option}</Link>
                 </li>
               );
             })}
-          </ul>
+          </ul>}
         </Dropdown>
       </MenuContainer>
     </NavbarContainer>

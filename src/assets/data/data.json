@@ -1,4 +1,5 @@
-{
+[
+  {
   "navbar": {
     "navigation": ["About", "Discover", "Get Started"]
   },
@@ -97,3 +98,4 @@
     }
   }
 }
+]

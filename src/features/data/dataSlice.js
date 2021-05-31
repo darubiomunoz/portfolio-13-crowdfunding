@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const API_URL = "https://api.jsonbin.io/b/60b2d58344f488301b80b9e3";
+const API_URL = "https://api.jsonbin.io/b/60b2d58344f488301b80b9e3/1";
 
 const initialState = {
-  data: [],
+  info: [],
   status: "idle",
   error: null
 };
@@ -30,7 +30,7 @@ export const dataSlice = createSlice({
       const { payload } = action;
 
       state.status = "fulfilled";
-      state.data = state.data.concat(payload);
+      state.info = state.info.concat(payload);
     },
     [fetchData.rejected]: (state, action) => {
       const { error } = action;
