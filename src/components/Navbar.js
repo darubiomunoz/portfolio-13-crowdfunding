@@ -56,14 +56,14 @@ const Navbar = () => {
             <ul>
               {navigation.map((option) => {
                 return (
-                  <>
-                    <li key={nanoid()}>
+                  <div key={nanoid()}>
+                    <li>
                       <Link to={`#${option}`}>{option}</Link>
                     </li>
                     {option !== "Get Started" && (
                       <div className="divisor"></div>
                     )}
-                  </>
+                  </div>
                 );
               })}
             </ul>
