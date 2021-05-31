@@ -9,7 +9,7 @@ const ProjectDescriptionContainer = styled.section`
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: -30px;
+  top: -50px;
   border-radius: ${borderRadiusSmall};
   background-color: ${colorOption5};
   box-shadow: ${boxShadow};
