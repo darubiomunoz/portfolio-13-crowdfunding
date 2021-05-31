@@ -19,6 +19,7 @@ const Plan = () => {
               <p className={plan.daysLeft !== "0" ? "counter_text" : "counter_text-disabled"}>left</p>
             </div>
             <button className={plan.daysLeft !== "0" ? "plan_button" : "plan_button-disabled"} type="button">{plan.button}</button>
+            {plan.daysLeft === "0" && <div className="screen"></div>}
           </PlanContainer>
         );
       })}

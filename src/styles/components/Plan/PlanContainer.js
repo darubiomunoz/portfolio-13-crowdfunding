@@ -102,6 +102,17 @@ const PlanContainer = styled.div`
     background-color: ${colorOption3_5};
     color: ${colorOption5};
   }
+
+  .screen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+  }
 `;
 
 export default PlanContainer;
