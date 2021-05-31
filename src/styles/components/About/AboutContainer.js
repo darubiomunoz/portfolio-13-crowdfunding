@@ -7,6 +7,8 @@ const AboutContainer = styled.section`
   padding: ${spacingRegular} ${spacingSmall};
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: -50px;
   border-radius: ${borderRadiusSmall};
   box-shadow: ${boxShadow};
 
