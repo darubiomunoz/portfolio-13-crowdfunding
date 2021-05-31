@@ -57,7 +57,7 @@ const Navbar = () => {
               {navigation.map((option) => {
                 return (
                   <>
-                    <li key={nanoid()} border={option}>
+                    <li key={nanoid()}>
                       <Link to={`#${option}`}>{option}</Link>
                     </li>
                     {option !== "Get Started" && (
