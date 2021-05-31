@@ -9,23 +9,17 @@ const Plan = () => {
 
   return (
     <>
-      {Object.keys(planInfo).map(plan => {
+      {planInfo.map(plan => {
         return (
           <PlanContainer key={nanoid()}>
             <h2 className="plan_title">{plan.title}</h2>
             <h3 className="plan_subtitle">{plan.subtitle}</h3>
-            <p className="plan_paragraph">
-              You get an ergonomic stand made of natural bamboo. You've helped
-              us launch our promotional campaign, and you'll be added to a
-              special Backer member list.
-            </p>
+            <p className="plan_paragraph">{plan.description}</p>
             <div className="plan_counter">
-              <span className="counter_number">101</span>
+              <span className="counter_number">{plan.daysLeft}</span>
               <p className="counter_text">left</p>
             </div>
-            <button className="plan_button" type="button">
-              Select Reward
-            </button>
+            <button className="plan_button" type="button">{plan.button}</button>
           </PlanContainer>
         );
       })}
