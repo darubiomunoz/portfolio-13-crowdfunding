@@ -11,7 +11,7 @@ const Plan = () => {
     <>
       {planInfo.map(plan => {
         return (
-          <PlanContainer key={nanoid()}>
+          <PlanContainer key={nanoid()} stock={plan.daysLeft}>
             <h2 className="plan_title">{plan.title}</h2>
             <h3 className="plan_subtitle">{plan.subtitle}</h3>
             <p className="plan_paragraph">{plan.description}</p>

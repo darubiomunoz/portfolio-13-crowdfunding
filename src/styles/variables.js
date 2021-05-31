@@ -1,8 +1,13 @@
-export const colorOption1 = `hsl(176, 50%, 47%)`;
-export const colorOption2 = `hsl(176, 72%, 28%)`;
-export const colorOption3 = `hsl(0, 0%, 48%)`;
-export const colorOption4 = `hsl(0, 0%, 0%)`;
-export const colorOption5 = `#FFF`;
+export const colorOption1 = `rgba(60, 180, 172)`;
+export const colorOption1_5 = `rgba(60, 180, 172, .3)`;
+export const colorOption2 = `rgba(20, 123, 116)`;
+export const colorOption2_5 = `rgba(20, 123, 116, .3)`;
+export const colorOption3 = `rgba(122, 122, 122)`;
+export const colorOption3_5 = `rgba(122, 122, 122, .3)`;
+export const colorOption4 = `rgba(0, 0, 0)`;
+export const colorOption4_5 = `rgba(0, 0, 0, .3)`;
+export const colorOption5 = `rgba(255, 255, 255)`;
+export const colorOption5_5 = `rgba(255, 255, 255, .3)`;
 
 export const fontFamily = `'Commissioner', sans-serif`;
 
