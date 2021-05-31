@@ -6,7 +6,8 @@ import {
   colorOption5,
   fontSizeRegular,
   fontWeightBold,
-  zIndexDropdown
+  zIndexDropdown,
+  colorOption3
 } from "../../variables";
 
 const Dropdown = styled.nav`
@@ -34,6 +35,11 @@ const Dropdown = styled.nav`
         font-size: ${fontSizeRegular};
         font-weight: ${fontWeightBold};
       }
+    }
+
+    .divisor {
+      width: 100%;
+      border-top: .1rem solid ${colorOption3};
     }
   }
 `;

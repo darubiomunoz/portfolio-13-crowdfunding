@@ -1,34 +1,40 @@
-import { useState, useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { nanoid } from '@reduxjs/toolkit';
+import { useState, useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { nanoid } from "@reduxjs/toolkit";
 
-import NavbarContainer from '../styles/components/Navbar/NavbarContainer';
-import MenuContainer from '../styles/components/Navbar/MenuContainer';
-import Dropdown from '../styles/components/Navbar/Dropdown';
+import NavbarContainer from "../styles/components/Navbar/NavbarContainer";
+import MenuContainer from "../styles/components/Navbar/MenuContainer";
+import Dropdown from "../styles/components/Navbar/Dropdown";
 
 import logo from "../assets/logos/logo.svg";
-import burgerIcon from '../assets/icons/icon-hamburger.svg';
-import closeIcon from '../assets/icons/icon-close-menu.svg'
+import burgerIcon from "../assets/icons/icon-hamburger.svg";
+import closeIcon from "../assets/icons/icon-close-menu.svg";
 
 const Navbar = () => {
-  const [ isOpen, setIsOpen ] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const dropdownMenu = useRef();
   const menuIcon = useRef();
-  const navigation = useSelector(state => state.data.info[0].navbar.navigation);
+  const navigation = useSelector(
+    (state) => state.data.info[0].navbar.navigation
+  );
 
   const handleClick = () => {
     setIsOpen(!isOpen);
-  }
+  };
 
   useEffect(() => {
-    const handleClickOutside = event => {
-      if (!dropdownMenu.current.contains(event.target) && !menuIcon.current.contains(event.target)) setIsOpen(false);
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    
+    const handleClickOutside = (event) => {
+      if (
+        !dropdownMenu.current.contains(event.target) &&
+        !menuIcon.current.contains(event.target)
+      )
+        setIsOpen(false);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -46,19 +52,26 @@ const Navbar = () => {
           />
         </figure>
         <Dropdown isOpen={isOpen} ref={dropdownMenu}>
-          {<ul>
-            {navigation.map((option) => {
-              return (
-                <li key={nanoid()} border={option}>
-                  <Link to={`#${option}`}>{option}</Link>
-                </li>
-              );
-            })}
-          </ul>}
+          {
+            <ul>
+              {navigation.map((option) => {
+                return (
+                  <>
+                    <li key={nanoid()} border={option}>
+                      <Link to={`#${option}`}>{option}</Link>
+                    </li>
+                    {option !== "Get Started" && (
+                      <div className="divisor"></div>
+                    )}
+                  </>
+                );
+              })}
+            </ul>
+          }
         </Dropdown>
       </MenuContainer>
     </NavbarContainer>
   );
-}
+};
 
 export default Navbar;
