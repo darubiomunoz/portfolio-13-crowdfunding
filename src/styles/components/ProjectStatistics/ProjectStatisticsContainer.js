@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { borderRadiusSmall, boxShadow, colorOption1, colorOption2, colorOption3, colorOption5, fontSizeNormal, fontSizeRegular, fontSizeSmall, fontWeightBold, spacingRegular, spacingSmall } from '../../variables';
+import { borderRadiusSmall, boxShadow, colorOption1, colorOption3, colorOption5, fontSizeNormal, fontSizeSmall, fontWeightBold, spacingRegular, spacingSmall } from '../../variables';
 
 const ProjectStatisticsContainer = styled.section`
   width: 87%;

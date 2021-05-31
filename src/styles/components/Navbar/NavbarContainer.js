@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingSmall, spacingRegular, zIndexNormal } from '../../variables';
+import { spacingRegular, zIndexNormal } from '../../variables';
 
 const NavbarContainer = styled.section`
   width: 100%;

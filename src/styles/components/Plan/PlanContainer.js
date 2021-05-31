@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { borderRadiusExtraSmall, borderRadiusRegular, boxShadow, colorOption1, colorOption3, colorOption5, fontSizeMedium, fontSizeNormal, fontSizeSmall, fontWeightBold, fontWeightNormal, spacingRegular, spacingSmall } from '../../variables';
+import { borderRadiusExtraSmall, borderRadiusRegular, boxShadow, colorOption1, colorOption3, colorOption5, fontSizeMedium, fontSizeSmall, fontWeightBold, fontWeightNormal, spacingRegular, spacingSmall } from '../../variables';
 
 const PlanContainer = styled.div`
   width: 100%;
