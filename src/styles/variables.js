@@ -1,5 +1,5 @@
 export const colorOption1 = `rgba(60, 180, 172)`;
-export const colorOption1_5 = `rgba(60, 180, 172, .3)`;
+export const colorOption1_5 = `rgba(60, 180, 172, .5)`;
 export const colorOption2 = `rgba(20, 123, 116)`;
 export const colorOption2_5 = `rgba(20, 123, 116, .3)`;
 export const colorOption3 = `rgba(122, 122, 122)`;

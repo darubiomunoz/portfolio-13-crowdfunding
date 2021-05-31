@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-import { borderRadiusExtraSmall, borderRadiusRegular, boxShadow, colorOption1, colorOption3, colorOption5, fontSizeMedium, fontSizeSmall, fontWeightBold, fontWeightNormal, spacingRegular, spacingSmall } from '../../variables';
+import { borderRadiusExtraSmall, borderRadiusRegular, boxShadow, colorOption1, colorOption1_5, colorOption3, colorOption3_5, colorOption4_5, colorOption5, colorOption5_5, fontSizeMedium, fontSizeSmall, fontWeightBold, fontWeightNormal, spacingRegular, spacingSmall } from '../../variables';
 
 const PlanContainer = styled.div`
   width: 100%;
   margin-top: ${spacingRegular};
   padding: ${spacingSmall};
   padding-bottom: ${spacingRegular};
+  position: relative;
   border-radius: ${borderRadiusExtraSmall};
   box-shadow: ${boxShadow};
 
@@ -52,6 +53,53 @@ const PlanContainer = styled.div`
     border: none;
     border-radius: ${borderRadiusRegular};
     background-color: ${colorOption1};
+    color: ${colorOption5};
+  }
+
+  .plan_title-disabled {
+    font-size: ${fontSizeSmall};
+    font-weight: ${fontWeightBold};
+    color: ${colorOption4_5};
+  }
+
+  .plan_subtitle-disabled {
+    font-size: ${fontSizeSmall};
+    font-weight: ${fontWeightNormal};
+    color: ${colorOption1_5};
+  }
+
+  .plan_paragraph-disabled {
+    margin-top: ${spacingRegular};
+    font-size: ${fontSizeSmall};
+    font-weight: ${fontWeightNormal};
+    color: ${colorOption3_5};
+  }
+
+  .plan_counter-disabled {
+    margin-top: ${spacingRegular};
+    display: flex;
+    align-items: center;
+
+    .counter_number-disabled {
+      font-size: ${fontSizeMedium};
+      font-weight: ${fontWeightBold};
+      color: ${colorOption4_5};
+    }
+
+    .counter_text-disabled {
+      margin-left: ${spacingSmall};
+      font-size: ${fontSizeSmall};
+      color: ${colorOption3_5};
+    }
+  }
+
+  .plan_button-disabled {
+    margin-top: ${spacingRegular};
+    padding: ${spacingSmall} ${spacingRegular};
+    font-size: ${fontSizeSmall};
+    border: none;
+    border-radius: ${borderRadiusRegular};
+    background-color: ${colorOption3_5};
     color: ${colorOption5};
   }
 `;
