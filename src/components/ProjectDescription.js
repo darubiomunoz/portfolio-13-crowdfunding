@@ -7,7 +7,6 @@ import bookmarkIcon from '../assets/icons/icon-bookmark.svg';
 
 const ProjectDescription = () => {
   const projectDescriptionInfo = useSelector(state => state.data.info[0].projectDescription);
-  console.log(projectDescriptionInfo);
 
   return (
     <ProjectDescriptionContainer id="">
