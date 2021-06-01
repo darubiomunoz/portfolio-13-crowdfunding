@@ -5,8 +5,7 @@ import { borderRadiusSmall, colorOption3, colorOption3_5, colorOption5, fontSize
 const ModalDefaultContainer = styled.div`
   width: 100vw;
   max-width: 100vw;
-  height: 100vh;
-  max-height: 100vh;
+  min-height: 100%;
   position: fixed;
   top: 0;
   left: 0;
