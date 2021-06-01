@@ -6,6 +6,8 @@ import closeIcon from '../assets/icons/icon-close-modal.svg';
 
 import { closeDefault } from '../features/modals/modalSlice';
 
+import Pledge from './Pledge';
+
 const ModalDefault = () => {
   const dispatch = useDispatch();
   const defaultInfo = useSelector(state => state.data.info[0].modals.default);
@@ -25,6 +27,7 @@ const ModalDefault = () => {
           </figure>
         </div>
         <p className="default_subtitle">{defaultInfo.subtitle}</p>
+        <Pledge />
       </main>
     </ModalDefaultContainer>
   );
