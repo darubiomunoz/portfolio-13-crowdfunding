@@ -21,7 +21,7 @@ const ModalDefault = () => {
     <ModalDefaultContainer>
       <main>
         <div>
-          <h1 className="default_title">{defaultInfo.title}</h1>
+          <h3 className="default_title">{defaultInfo.title}</h3>
           <figure>
             <img src={closeIcon} alt="Press enter to close the modal" onClick={handleClosingClick} />
           </figure>

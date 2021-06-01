@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const PledgeContainer = styled.div`
+const PledgeContainer = styled.label`
 
 `;
 
