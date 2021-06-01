@@ -3,7 +3,14 @@ import ModalDefaultContainer from '../styles/components/ModalDefault/ModalDefaul
 const ModalDefault = () => {
   return (
     <ModalDefaultContainer>
-      wena wena
+      <main>
+        <div>
+          <h1></h1>
+          <figure>
+            <img />
+          </figure>
+        </div>
+      </main>
     </ModalDefaultContainer>
   );
 };
