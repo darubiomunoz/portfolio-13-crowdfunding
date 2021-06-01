@@ -12,13 +12,14 @@ const Pledge = () => {
         <PledgeContainer htmlFor="">
           <div className="pledge_header">
             <input id="" type="radio" />
-            <h3 className="pledge_title"></h3>
+            <h3 className="pledge_title">{pledge.title}</h3>
+            {pledge.subtitle && <h4>{pledge.subtitle}</h4>}
           </div>
-          <p className="pledge_description"></p>
-          {false && (
+          <p className="pledge_description">{pledge.description}</p>
+          {pledge.daysLeft && (
             <div className="pledge_availability">
-              <span></span>
-              <p></p>
+              <span>{pledge.daysLeft}</span>
+              <p>left</p>
             </div>
           )}
         </PledgeContainer>
