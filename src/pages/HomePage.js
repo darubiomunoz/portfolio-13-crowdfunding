@@ -11,10 +11,12 @@ import Navbar from '../components/Navbar';
 import ProjectDescription from '../components/ProjectDescription';
 import ProjectStatistics from '../components/ProjectStatistics';
 import About from '../components/About';
+import ModalDefault from '../components/ModalDefault';
 
 const HomePage = () => {
   const dispatch = useDispatch();
   const dataStatus = useSelector(state => state.data.status);
+  const defaultState = useSelector(state => state.modals.default);
 
   useEffect(() => {
     if (dataStatus === "idle") dispatch(fetchData());
@@ -24,6 +26,7 @@ const HomePage = () => {
     <>
       {dataStatus !== "fulfilled" && <h1>loading...</h1>}
       {dataStatus === "fulfilled" && (
+        <>
         <HomePageContainer>
           <picture>
             <source
@@ -40,6 +43,8 @@ const HomePage = () => {
           <ProjectStatistics />
           <About />
         </HomePageContainer>
+        {defaultState === true && <ModalDefault />}
+        </>
       )}
     </>
   );
