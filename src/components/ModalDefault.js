@@ -1,5 +1,11 @@
+import ModalDefaultContainer from '../styles/components/ModalDefault/ModalDefaultContainer';
+
 const ModalDefault = () => {
-  return (<h4>modal Default</h4>);
+  return (
+    <ModalDefaultContainer>
+      wena wena
+    </ModalDefaultContainer>
+  );
 };
 
 export default ModalDefault;
