@@ -32,7 +32,7 @@ const HomePage = () => {
             />
             <img
               src="https://i.postimg.cc/85g521RV/image-hero-mobile.jpg"
-              alt="Background picture. Desktop with a desktop computer"
+              alt="Background. Desktop with a desktop computer"
             />
           </picture>
           <Navbar />
