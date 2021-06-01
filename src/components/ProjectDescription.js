@@ -1,4 +1,6 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { openDefault } from '../features/modals/modalSlice';
 
 import ProjectDescriptionContainer from "../styles/components/ProjectDescription/ProjectDescriptionContainer";
 
@@ -6,7 +8,13 @@ import mastercraftLogo from '../assets/logos/logo-mastercraft.svg';
 import bookmarkIcon from '../assets/icons/icon-bookmark.svg';
 
 const ProjectDescription = () => {
+  const dispatch = useDispatch();
   const projectDescriptionInfo = useSelector(state => state.data.info[0].projectDescription);
+  const defaultModal = useSelector(state => state.modals.default);
+
+  const handleClick = () => {
+    if (defaultModal === false) dispatch(openDefault());
+  };
 
   return (
     <ProjectDescriptionContainer id="">
@@ -18,7 +26,7 @@ const ProjectDescription = () => {
         <p>{projectDescriptionInfo.purpose}</p>
       </article>
       <div>
-        <button className="backthisproject" type="button">{projectDescriptionInfo.buttons.funding}</button>
+        <button className="backthisproject" type="button" onClick={handleClick}>{projectDescriptionInfo.buttons.funding}</button>
         <button className="bookmark" type="button">
           <img src={bookmarkIcon} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
         </button>
