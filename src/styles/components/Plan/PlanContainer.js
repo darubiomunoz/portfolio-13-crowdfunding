@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { borderRadiusExtraSmall, borderRadiusRegular, boxShadow, colorOption1, colorOption1_5, colorOption3, colorOption3_5, colorOption4_5, colorOption5, colorOption5_5, fontSizeMedium, fontSizeSmall, fontWeightBold, fontWeightNormal, spacingRegular, spacingSmall } from '../../variables';
+import { borderRadiusExtraSmall, borderRadiusRegular, boxShadow, colorOption1, colorOption1_5, colorOption3, colorOption3_5, colorOption4_5, colorOption5, fontSizeMedium, fontSizeSmall, fontWeightBold, fontWeightNormal, spacingRegular, spacingSmall } from '../../variables';
 
 const PlanContainer = styled.div`
   width: 100%;

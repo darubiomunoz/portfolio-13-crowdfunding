@@ -6,7 +6,7 @@ import Plan from './Plan';
 
 const About = () => {
   const aboutInfo = useSelector(state => state.data.info[0].about);
-  console.log(aboutInfo);
+
   return (
     <AboutContainer>
       <h2 className="about_title">{aboutInfo.title}</h2>
