@@ -13,17 +13,17 @@ const Pledge = () => {
           <div className="pledge_header">
             <input id="" type="radio" />
             <div className="header_titles">
-              <h3 className="pledge_title">{pledge.title}</h3>
+              <h3 className={pledge.daysLeft !== "0" ? "pledge_title" : "pledge_title-disabled"}>{pledge.title}</h3>
               {pledge.subtitle && (
-                <h4 className="pledge_subtitle">{pledge.subtitle}</h4>
+                <h4 className={pledge.daysLeft !== "0" ?"pledge_subtitle" : "pledge_subtitle-disabled"}>{pledge.subtitle}</h4>
               )}
             </div>
           </div>
-          <p className="pledge_description">{pledge.description}</p>
+          <p className={pledge.daysLeft !== "0" ? "pledge_description" : "pledge_description-disabled"}>{pledge.description}</p>
           {pledge.daysLeft && (
             <div className="pledge_availability">
-              <span className="pledge_daysleft">{pledge.daysLeft}</span>
-              <p className="availability_text">left</p>
+              <span className={pledge.daysLeft !== "0" ? "pledge_daysleft" : "pledge_daysleft-disabled"}>{pledge.daysLeft}</span>
+              <p className={pledge.daysLeft !== "0" ? "availability_text" : "availability_text-disabled"}>left</p>
             </div>
           )}
         </PledgeContainer>
