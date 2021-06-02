@@ -16,16 +16,17 @@ const ModalDefaultContainer = styled.div`
   overflow-y: auto;
   z-index: ${zIndexModal};
 
-  main {
+  .modaldefault {
     width: 90%;
-    max-height: fit-content;
+    height: fit-content;
     padding: ${spacingSmall};
     display: flex;
     flex-direction: column;
+    row-gap: ${spacingSmall};
     border-radius: ${borderRadiusSmall};
     background-color: ${colorOption5};
 
-    div {
+    .modaldefault_header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -35,11 +36,11 @@ const ModalDefaultContainer = styled.div`
         font-weight: ${fontWeightBold};
       }
 
-      figure {
+      .modaldefault_container-image {
         width: 10px;
         height: 10px;
 
-        img {
+        .modaldefault_image {
           width: 100%;
           height: 100%;
         }
@@ -47,7 +48,6 @@ const ModalDefaultContainer = styled.div`
     }
 
     .default_subtitle {
-      margin-top: ${spacingSmall};
       font-size: ${fontSizeSmall};
       color: ${colorOption3};
     }

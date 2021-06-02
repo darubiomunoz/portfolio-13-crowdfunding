@@ -19,11 +19,11 @@ const ModalDefault = () => {
 
   return (
     <ModalDefaultContainer>
-      <main>
-        <div>
+      <main className="modaldefault">
+        <div className="modaldefault_header">
           <h3 className="default_title">{defaultInfo.title}</h3>
-          <figure>
-            <img src={closeIcon} alt="Press enter to close the modal" onClick={handleClosingClick} />
+          <figure className="modaldefault_container-image">
+            <img className="modaldefault_image" src={closeIcon} alt="Press enter to close the modal" onClick={handleClosingClick} />
           </figure>
         </div>
         <p className="default_subtitle">{defaultInfo.subtitle}</p>
