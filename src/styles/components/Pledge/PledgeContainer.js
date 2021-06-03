@@ -10,7 +10,8 @@ const PledgeContainer = styled.label`
   border-radius: ${borderRadiusSmall};
   box-shadow: ${boxShadow};
 
-  :focus-within {
+  :focus-within,
+  :active {
     border: .2rem solid ${colorOption1};
   }
 

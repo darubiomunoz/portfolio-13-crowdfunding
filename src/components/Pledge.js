@@ -26,6 +26,15 @@ const Pledge = () => {
               <p className={pledge.daysLeft !== "0" ? "availability_text" : "availability_text-disabled"}>left</p>
             </div>
           )}
+          {pledge.end.length > 0 && (
+            <div className="pledge_footer">
+              <h3 className="footer_title"></h3>
+              <div className="footer_fields">
+                <input type="number" />
+                <button type="button"></button>
+              </div>
+            </div>
+          )}
         </PledgeContainer>
       );
     })}
