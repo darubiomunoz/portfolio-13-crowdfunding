@@ -5,16 +5,19 @@ import { borderRadiusSmall, boxShadow, colorOption1, colorOption3, fontSizeRegul
 const PledgeContainer = styled.label`
   display: flex;
   flex-direction: column;
-  row-gap: ${spacingSmall};
   border-radius: ${borderRadiusSmall};
   box-shadow: ${boxShadow};
 
-  :focus-within {
+  :focus-within,
+  :focus {
     border: 0.2rem solid ${colorOption1};
   }
 
   .pledge_body {
     padding: ${spacingSmall};
+    display: flex;
+    flex-direction: column;
+    row-gap: ${spacingSmall};
 
     .pledge_header {
       display: flex;
@@ -83,6 +86,10 @@ const PledgeContainer = styled.label`
         color: ${colorOption3_5};
       }
     }
+  }
+
+  .disappear {
+    display: none;
   }
 
   .pledge_footer {
