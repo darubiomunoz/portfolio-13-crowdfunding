@@ -7,11 +7,7 @@ const PledgeContainer = styled.label`
   flex-direction: column;
   border-radius: ${borderRadiusSmall};
   box-shadow: ${boxShadow};
-
-  :focus-within,
-  :focus {
-    border: 0.2rem solid ${colorOption1};
-  }
+  border: ${(props) => (props.border ? `0.2rem solid ${colorOption1}` : `none`)};
 
   .pledge_body {
     padding: ${spacingSmall};

@@ -9,7 +9,6 @@ const Pledge = () => {
   const pledgeInfo = useSelector(state => state.data.info[0].modals.default.pledges);
 
   const handleClickSelection = event => {
-    console.log(event.target.id);
     setSelection(event.target.id);
   }
 
@@ -17,7 +16,7 @@ const Pledge = () => {
     <>
     {pledgeInfo.map(pledge => {
       return (
-        <PledgeContainer key={nanoid()} htmlFor={pledge.title}>
+        <PledgeContainer key={nanoid()} htmlFor={pledge.title} border={pledge.title === selection ? true : false}>
           <section className="pledge_body">
             <div className="pledge_header">
               <input
