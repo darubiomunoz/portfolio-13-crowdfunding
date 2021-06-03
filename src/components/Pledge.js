@@ -26,6 +26,7 @@ const Pledge = () => {
                 disabled={pledge.daysLeft === "0" ? true : false}
                 onClick={(event) => handleClickSelection(event)}
                 checked={pledge.title === selection ? true : false}
+                readOnly
               />
               <div className="header_titles">
                 <h3
