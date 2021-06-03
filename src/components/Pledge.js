@@ -77,7 +77,7 @@ const Pledge = () => {
             <section className="pledge_footer">
               <h3 className="footer_title-pledge">{pledge.end[0]}</h3>
               <div className="footer_fields">
-                <input className="fields_amount-pledge" type="number" placeholder={pledge.end[1]} />
+                <input className="fields_amount-pledge" type="number" placeholder={`$ ${pledge.end[1]}`} />
                 <button className="fields_button-pledge" type="button">{pledge.end[2]}</button>
               </div>
             </section>

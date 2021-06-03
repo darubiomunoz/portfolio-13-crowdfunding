@@ -108,7 +108,7 @@ const PledgeContainer = styled.label`
       .fields_amount-pledge {
         width: 40%;
         padding: ${spacingSmall} ${spacingRegular};
-        border: .1rem solid ${colorOption3_5};
+        border: 0.1rem solid ${colorOption3_5};
         border-radius: ${borderRadiusRegular};
         font-size: ${fontSizeSmall};
         font-weight: ${fontWeightBold};
