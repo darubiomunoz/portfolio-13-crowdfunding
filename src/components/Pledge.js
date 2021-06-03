@@ -9,9 +9,9 @@ const Pledge = () => {
     <>
     {pledgeInfo.map(pledge => {
       return (
-        <PledgeContainer htmlFor="">
+        <PledgeContainer htmlFor={pledge.title}>
           <div className="pledge_header">
-            <input id="" type="radio" />
+            <input id={pledge.title} type="radio" disabled={pledge.daysLeft === "0" ? true : false}/>
             <div className="header_titles">
               <h3 className={pledge.daysLeft !== "0" ? "pledge_title" : "pledge_title-disabled"}>{pledge.title}</h3>
               {pledge.subtitle && (
