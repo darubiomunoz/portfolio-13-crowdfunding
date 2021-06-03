@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { borderRadiusSmall, colorOption3, colorOption3_5, colorOption5, fontSizeRegular, fontSizeSmall, fontWeightBold, spacingRegular, spacingSmall, zIndexModal } from '../../variables';
+import { borderRadiusSmall, colorOption1, colorOption3, colorOption3_5, colorOption5, fontSizeRegular, fontSizeSmall, fontWeightBold, spacingRegular, spacingSmall, zIndexModal } from '../../variables';
 
 const ModalDefaultContainer = styled.div`
   width: 100vw;
