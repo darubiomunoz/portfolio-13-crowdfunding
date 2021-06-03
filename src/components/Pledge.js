@@ -28,10 +28,10 @@ const Pledge = () => {
           )}
           {pledge.end.length > 0 && (
             <div className="pledge_footer">
-              <h3 className="footer_title"></h3>
+              <h3 className="footer_title">{pledge.end[0]}</h3>
               <div className="footer_fields">
-                <input type="number" />
-                <button type="button"></button>
+                <input type="number" placeholder={pledge.end[1]} />
+                <button type="button">{pledge.end[2]}</button>
               </div>
             </div>
           )}
