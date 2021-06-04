@@ -1,15 +1,22 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 
 import PledgeContainer from '../styles/components/Pledge/PledgeContainer';
 
+import { openSuccess } from '../features/modals/modalSlice';
+
 const Pledge = () => {
   const [ selection, setSelection ] = useState('');
   const pledgeInfo = useSelector(state => state.data.info[0].modals.default.pledges);
+  const dispatch = useDispatch();
 
   const handleClickSelection = event => {
     setSelection(event.target.id);
+  }
+
+  const handleClickSupport = () => {
+    dispatch(openSuccess());
   }
 
   return (
@@ -21,6 +28,7 @@ const Pledge = () => {
             <div className="pledge_header">
               <input
                 id={pledge.title}
+                className="pledge_radiobutton"
                 type="radio"
                 name="pledge"
                 disabled={pledge.daysLeft === "0" ? true : false}
@@ -93,7 +101,7 @@ const Pledge = () => {
                   placeholder={`$ ${pledge.end[1]}`}
                   required
                 />
-                <button className="fields_button-pledge" type="button">
+                <button className="fields_button-pledge" type="button" onClick={handleClickSupport}>
                   {pledge.end[2]}
                 </button>
               </div>

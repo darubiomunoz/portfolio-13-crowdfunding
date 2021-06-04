@@ -24,6 +24,10 @@ const PledgeContainer = styled.label`
         display: flex;
         flex-direction: column;
 
+        .pledge_radiobutton {
+          background-color: ${colorOption1};
+        }
+
         .pledge_title {
           font-size: ${fontSizeSmall};
           font-weight: ${fontWeightBold};
