@@ -12,11 +12,13 @@ import ProjectDescription from '../components/ProjectDescription';
 import ProjectStatistics from '../components/ProjectStatistics';
 import About from '../components/About';
 import ModalDefault from '../components/ModalDefault';
+import ModalSuccess from '../components/ModalSuccess';
 
 const HomePage = () => {
   const dispatch = useDispatch();
   const dataStatus = useSelector(state => state.data.status);
   const defaultState = useSelector(state => state.modals.default);
+  const successState = useSelector(state => state.modals.success);
 
   useEffect(() => {
     if (dataStatus === "idle") dispatch(fetchData());
@@ -43,7 +45,8 @@ const HomePage = () => {
           <ProjectStatistics />
           <About />
         </HomePageContainer>
-        {defaultState === true && <ModalDefault />}
+        {defaultState && <ModalDefault />}
+        {successState && <ModalSuccess />}
         </>
       )}
     </>
