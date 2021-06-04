@@ -14,7 +14,7 @@ const ModalDefault = () => {
   const defaultStatus = useSelector(state => state.modals.default);
 
   const handleClosingClick = () => {
-    if (defaultStatus === true) dispatch(closeDefault());
+    if (defaultStatus) dispatch(closeDefault());
   }
 
   return (
