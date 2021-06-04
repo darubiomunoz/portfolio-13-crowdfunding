@@ -1,12 +1,18 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import ModalSuccessContainer from '../styles/components/ModalSuccess/ModalSuccessContainer';
 
 import successLogo from '../assets/icons/icon-check.svg';
 
+import { closeSuccess } from '../features/modals/modalSlice';
+
 const ModalSuccess = () => {
   const modalSuccessInfo = useSelector(state => state.data.info[0].modals.successful);
-  console.log(modalSuccessInfo);
+  const dispatch = useDispatch();
+
+  const handleClickClose = () => {
+    dispatch(closeSuccess());
+  }
 
   return (
     <ModalSuccessContainer>
@@ -16,7 +22,7 @@ const ModalSuccess = () => {
         </figure>
         <h3 className="modalsuccess_title">{modalSuccessInfo.title}</h3>
         <p className="modalsuccess_description">{modalSuccessInfo.description}</p>
-        <button className="modalsuccess_button" type="button">{modalSuccessInfo.button}</button>
+        <button className="modalsuccess_button" type="button" onClick={handleClickClose}>{modalSuccessInfo.button}</button>
       </div>
     </ModalSuccessContainer>
   );
