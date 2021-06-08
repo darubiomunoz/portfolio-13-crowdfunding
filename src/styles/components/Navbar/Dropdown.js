@@ -9,7 +9,8 @@ import {
   fontWeightBold,
   zIndexDropdown,
   colorOption3,
-  device
+  device,
+  spacingRegular
 } from "../../variables";
 
 const Dropdown = styled.nav`
@@ -18,10 +19,14 @@ const Dropdown = styled.nav`
   width: 100%;
   padding: ${spacingSmall};
   position: absolute;
-  top: 50px;
+  top: 5rem;
   left: 0;
   z-index: ${zIndexDropdown};
   background-color: transparent;
+
+  @media ${device.width480} {
+    top: 7.5rem;
+  }
 
   .navbar_list {
     width: 92%;
@@ -38,7 +43,7 @@ const Dropdown = styled.nav`
         font-weight: ${fontWeightBold};
       }
 
-      @media screen and ${device.width480} {
+      @media ${device.width480} {
         .navbar_link {
           font-size: ${fontSizeNormal};
         }
@@ -47,7 +52,13 @@ const Dropdown = styled.nav`
 
     .divisor {
       width: 100%;
-      border-top: .1rem solid ${colorOption3};
+      border-top: 0.1rem solid ${colorOption3};
+    }
+
+    @media ${device.width480} {
+      .navbar_item {
+        padding: ${spacingRegular};
+      }
     }
   }
 `;

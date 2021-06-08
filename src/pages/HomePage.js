@@ -43,7 +43,7 @@ const HomePage = () => {
           <Navbar />
           <ProjectDescription />
           <ProjectStatistics />
-          <About />
+          <About /> 
         </HomePageContainer>
         {defaultState && <ModalDefault />}
         {successState && <ModalSuccess />}
