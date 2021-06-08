@@ -44,8 +44,8 @@ const Navbar = () => {
         <img className="navbar_image" src={logo} alt="Crowdfund logotype" />
       </figure>
       <MenuContainer>
-        <figure onClick={handleClick}>
-          <img
+        <figure className="navbar_icon-container" onClick={handleClick}>
+          <img className="navbar_icon"
             src={!isOpen ? burgerIcon : closeIcon}
             alt="Burger Icon. Press enter to open the navigation menu"
             ref={menuIcon}
