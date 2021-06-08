@@ -1,6 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { borderRadiusSmall, boxShadow, colorOption3, fontSizeRegular, fontSizeSmall, fontWeightBold, spacingRegular, spacingSmall } from '../../variables';
+import {
+  borderRadiusSmall,
+  boxShadow,
+  colorOption3,
+  fontSizeRegular,
+  fontSizeSmall,
+  fontWeightBold,
+  spacingRegular,
+  spacingSmall,
+  device,
+  fontSizeNormal
+} from "../../variables";
 
 const AboutContainer = styled.section`
   width: 87%;
@@ -8,9 +19,13 @@ const AboutContainer = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -50px;
+  top: -5rem;
   border-radius: ${borderRadiusSmall};
   box-shadow: ${boxShadow};
+
+  @media ${device.width480} {
+    top: -7.5rem;
+  }
 
   .about_title {
     font-size: ${fontSizeRegular};
@@ -21,6 +36,16 @@ const AboutContainer = styled.section`
     margin-top: ${spacingSmall};
     font-size: ${fontSizeSmall};
     color: ${colorOption3};
+  }
+
+  @media ${device.width480} {
+    .about_title {
+      font-size: ${fontSizeNormal};
+    }
+
+    .about_paragraph {
+      font-size: ${fontSizeRegular};
+    }
   }
 `;
 

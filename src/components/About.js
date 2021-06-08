@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
 
-import AboutContainer from '../styles/components/About/AboutContainer';
+import AboutContainer from "../styles/components/About/AboutContainer";
 
-import Plan from './Plan';
+import Plan from "./Plan";
 
 const About = () => {
-  const aboutInfo = useSelector(state => state.data.info[0].about);
+  const aboutInfo = useSelector((state) => state.data.info[0].about);
 
   return (
     <AboutContainer>
@@ -15,6 +15,6 @@ const About = () => {
       <Plan />
     </AboutContainer>
   );
-}
+};
 
 export default About;
