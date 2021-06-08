@@ -40,8 +40,8 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <figure>
-        <img src={logo} alt="Crowdfund logotype" />
+      <figure className="navbar_image-container">
+        <img className="navbar_image" src={logo} alt="Crowdfund logotype" />
       </figure>
       <MenuContainer>
         <figure onClick={handleClick}>

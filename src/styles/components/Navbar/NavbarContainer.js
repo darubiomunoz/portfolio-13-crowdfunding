@@ -13,11 +13,11 @@ const NavbarContainer = styled.section`
   left: 0;
   z-index: ${zIndexNormal};
 
-  figure {
+  .navbar_image-container {
     width: 40%;
     height: auto;
 
-    img {
+    .navbar_image {
       width: 100%;
       height: auto;
     }
