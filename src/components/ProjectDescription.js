@@ -14,7 +14,7 @@ const ProjectDescription = () => {
 
   const handleClick = () => {
     if (defaultModal === false) dispatch(openDefault());
-  };
+  }; 
 
   return (
     <ProjectDescriptionContainer id="">
