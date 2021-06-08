@@ -58,7 +58,9 @@ const ProjectDescriptionContainer = styled.section`
       border: none;
     }
 
-    
+    @media screen and ${device.width320} {
+      justify-content: space-evenly;
+    }
 
     .button_backthisproject {
       padding: ${spacingSmall} ${spacingNormal};
