@@ -16,7 +16,9 @@ import {
   fontWeightNormal,
   spacingRegular,
   spacingSmall,
-  device
+  device,
+  fontSizeRegular,
+  fontSizeLarge
 } from "../../variables";
 
 const PlanContainer = styled.div`
@@ -118,7 +120,38 @@ const PlanContainer = styled.div`
   }
 
   @media ${device.width480} {
+    .plan_title,
+    .plan_title-disabled {
+      font-size: ${fontSizeRegular};
+    }
 
+    .plan_subtitle,
+    .plan_subtitle-disabled {
+      font-size: ${fontSizeRegular};
+    }
+
+    .plan_paragraph,
+    .plan_paragraph-disabled {
+      font-size: ${fontSizeRegular};
+    }
+
+    .plan_counter,
+    .plan_counter-disabled {
+      .counter_number,
+      .counter_number-disabled {
+        font-size: ${fontSizeLarge};
+      }
+
+      .counter_text,
+      .counter_text-disabled {
+        font-size: ${fontSizeRegular};
+      }
+    }
+
+    .plan_button,
+    .plan_button-disabled {
+      font-size: ${fontSizeRegular};
+    }
   }
 `;
 
