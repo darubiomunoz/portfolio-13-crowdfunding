@@ -18,17 +18,17 @@ const ProjectDescription = () => {
 
   return (
     <ProjectDescriptionContainer id="">
-      <figure>
-        <img src={mastercraftLogo} alt="Mastercraft logotype" />
+      <figure className="description_image-container">
+        <img className="description_image" src={mastercraftLogo} alt="Mastercraft logotype" />
       </figure>
-      <article>
-        <h1>{projectDescriptionInfo.name}</h1>
-        <p>{projectDescriptionInfo.purpose}</p>
+      <article className="description_info-container">
+        <h1 className="description_title">{projectDescriptionInfo.name}</h1>
+        <p className="description_text">{projectDescriptionInfo.purpose}</p>
       </article>
-      <div>
-        <button className="backthisproject" type="button" onClick={handleClick}>{projectDescriptionInfo.buttons.funding}</button>
-        <button className="bookmark" type="button">
-          <img src={bookmarkIcon} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
+      <div className="description_button-container">
+        <button className="button_backthisproject" type="button" onClick={handleClick}>{projectDescriptionInfo.buttons.funding}</button>
+        <button className="button_bookmark" type="button">
+          <img className="button_bookmark-icon" src={bookmarkIcon} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
         </button>
       </div>
     </ProjectDescriptionContainer>

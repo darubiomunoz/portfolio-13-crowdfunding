@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { borderRadiusSmall, colorOption5, fontSizeSmall, fontSizeRegular, fontWeightBold, spacingSmall, fontWeightLight, colorOption3, spacingNormal, spacingRegular, colorOption1, borderRadiusRegular, boxShadow } from '../../variables';
+import { borderRadiusSmall, colorOption5, fontSizeSmall, fontSizeRegular, fontWeightBold, spacingSmall, fontWeightLight, colorOption3, spacingNormal, spacingRegular, colorOption1, borderRadiusRegular, boxShadow, device } from '../../variables';
 
 const ProjectDescriptionContainer = styled.section`
   width: 87%;
@@ -14,19 +14,19 @@ const ProjectDescriptionContainer = styled.section`
   background-color: ${colorOption5};
   box-shadow: ${boxShadow};
 
-  figure {
+  .description_image-container {
     width: 35px;
     height: 35px;
     position: absolute;
     top: -17.5px;
 
-    img {
+    .description_image {
       width: 100%;
       height: 100%;
     }
   }
 
-  article {
+  .description_info-container {
     padding-top: ${spacingSmall};
     display: flex;
     flex-direction: column;
@@ -34,20 +34,20 @@ const ProjectDescriptionContainer = styled.section`
     align-items: center;
     text-align: center;
 
-    h1 {
+    .description_title {
       padding: 0 ${spacingNormal};
       font-size: ${fontSizeRegular};
       font-weight: ${fontWeightBold};
     }
 
-    p {
+    .description_text {
       font-size: ${fontSizeSmall};
       font-weight: ${fontWeightLight};
       color: ${colorOption3};
     }
   }
 
-  div {
+  .description_button-container {
     width: 100%;
     margin-top: ${spacingRegular};
     display: flex;
@@ -58,7 +58,9 @@ const ProjectDescriptionContainer = styled.section`
       border: none;
     }
 
-    .backthisproject {
+    
+
+    .button_backthisproject {
       padding: ${spacingSmall} ${spacingNormal};
       font-size: ${fontSizeSmall};
       font-weight: ${fontWeightBold};
@@ -67,12 +69,12 @@ const ProjectDescriptionContainer = styled.section`
       color: ${colorOption5};
     }
 
-    .bookmark {
+    .button_bookmark {
       width: 30px;
       height: 30px;
       background-color: transparent;
 
-      img {
+      .button_bookmark-icon {
         width: 100%;
         height: 100%;
       }
