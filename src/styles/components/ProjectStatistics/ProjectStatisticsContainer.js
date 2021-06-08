@@ -10,7 +10,7 @@ const ProjectStatisticsContainer = styled.section`
   row-gap: ${spacingSmall};
   align-items: center;
   position: relative;
-  top: -50px;
+  top: -5rem;
   border-radius: ${borderRadiusSmall};
   background-color: ${colorOption5};
   box-shadow: ${boxShadow};

@@ -1,6 +1,22 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { borderRadiusSmall, colorOption5, fontSizeSmall, fontSizeRegular, fontSizeNormal, fontWeightBold, spacingSmall, fontWeightLight, colorOption3, spacingNormal, spacingRegular, colorOption1, borderRadiusRegular, boxShadow, device } from '../../variables';
+import {
+  borderRadiusSmall,
+  colorOption5,
+  fontSizeSmall,
+  fontSizeRegular,
+  fontSizeNormal,
+  fontWeightBold,
+  spacingSmall,
+  fontWeightLight,
+  colorOption3,
+  spacingNormal,
+  spacingRegular,
+  colorOption1,
+  borderRadiusRegular,
+  boxShadow,
+  device
+} from "../../variables";
 
 const ProjectDescriptionContainer = styled.section`
   width: 87%;
@@ -9,16 +25,20 @@ const ProjectDescriptionContainer = styled.section`
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: -7.5rem;
+  top: -5rem;
   border-radius: ${borderRadiusSmall};
   background-color: ${colorOption5};
   box-shadow: ${boxShadow};
 
+  @media ${device.width480} {
+    top: -7.5rem;
+  }
+
   .description_image-container {
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     position: absolute;
-    top: -25px;
+    top: -2.5rem;
 
     .description_image {
       width: 100%;
@@ -46,7 +66,7 @@ const ProjectDescriptionContainer = styled.section`
       color: ${colorOption3};
     }
 
-    @media screen and ${device.width480} {
+    @media ${device.width480} {
       .description_title {
         font-size: ${fontSizeNormal};
       }
@@ -64,7 +84,7 @@ const ProjectDescriptionContainer = styled.section`
     justify-content: space-between;
     align-items: center;
 
-    @media screen and ${device.width320} {
+    @media ${device.width320} {
       justify-content: space-evenly;
     }
 
@@ -92,7 +112,7 @@ const ProjectDescriptionContainer = styled.section`
       }
     }
 
-    @media screen and ${device.width480} {
+    @media ${device.width480} {
       .button_backthisproject {
         font-size: ${fontSizeRegular};
       }
