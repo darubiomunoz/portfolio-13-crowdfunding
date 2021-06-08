@@ -1,6 +1,20 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { borderRadiusSmall, boxShadow, colorOption1, colorOption3, colorOption5, fontSizeNormal, fontSizeSmall, fontWeightBold, spacingRegular, spacingSmall } from '../../variables';
+import {
+  borderRadiusSmall,
+  boxShadow,
+  colorOption1,
+  colorOption3,
+  colorOption5,
+  fontSizeNormal,
+  fontSizeSmall,
+  fontWeightBold,
+  spacingRegular,
+  spacingSmall,
+  device,
+  fontSizeRegular,
+  fontSizeMedium
+} from "../../variables";
 
 const ProjectStatisticsContainer = styled.section`
   width: 87%;
@@ -15,22 +29,26 @@ const ProjectStatisticsContainer = styled.section`
   background-color: ${colorOption5};
   box-shadow: ${boxShadow};
 
-  .figure {
+  @media ${device.width480} {
+    top: -7.5rem;
+  }
+
+  .statistics_figure {
     font-size: ${fontSizeNormal};
     font-weight: ${fontWeightBold};
   }
 
-  .sub-paragraph {
+  .statistics_subparagraph {
     font-size: ${fontSizeSmall};
     color: ${colorOption3};
   }
 
-  .divisor {
+  .statistics_divisor {
     width: 26%;
     border-top: 0.1rem solid ${colorOption3};
   }
 
-  .progress-bar {
+  .statistics_progressbar {
     width: 100%;
     height: 1rem;
     display: flex;
@@ -38,11 +56,21 @@ const ProjectStatisticsContainer = styled.section`
     border-radius: ${borderRadiusSmall};
     background-color: ${colorOption3};
 
-    span {
+    .statistics_progress {
       width: 80%;
       height: inherit;
       border-radius: ${borderRadiusSmall};
       background-color: ${colorOption1};
+    }
+  }
+
+  @media ${device.width480} {
+    .statistics_figure {
+      font-size: ${fontSizeMedium};
+    }
+
+    .statistics_subparagraph {
+      font-size: ${fontSizeRegular};
     }
   }
 `;

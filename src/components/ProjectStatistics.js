@@ -7,20 +7,20 @@ const ProjectStatistics = () => {
 
   return (
     <ProjectStatisticsContainer>
-      <p className="figure">{projectStatisticsInfo.money.figure}</p>
-      <span className="sub-paragraph">{projectStatisticsInfo.money.text}</span>
-      <span className="divisor"></span>
-      <p className="figure">{projectStatisticsInfo.backers.figure}</p>
-      <span className="sub-paragraph">
+      <p className="statistics_figure">{projectStatisticsInfo.money.figure}</p>
+      <span className="statistics_subparagraph">{projectStatisticsInfo.money.text}</span>
+      <span className="statistics_divisor"></span>
+      <p className="statistics_figure">{projectStatisticsInfo.backers.figure}</p>
+      <span className="statistics_subparagraph">
         {projectStatisticsInfo.backers.text}
       </span>
-      <span className="divisor"></span>
-      <p className="figure">{projectStatisticsInfo.time.figure}</p>
-      <span className="sub-paragraph">
+      <span className="statistics_divisor"></span>
+      <p className="statistics_figure">{projectStatisticsInfo.time.figure}</p>
+      <span className="statistics_subparagraph">
         {projectStatisticsInfo.time.text}
       </span>
-      <div className="progress-bar">
-        <span></span>
+      <div className="statistics_progressbar">
+        <span className="statistics_progress"></span>
       </div>
     </ProjectStatisticsContainer>
   );
