@@ -5,9 +5,11 @@ import {
   borderRadiusSmall,
   colorOption5,
   fontSizeRegular,
+  fontSizeNormal,
   fontWeightBold,
   zIndexDropdown,
-  colorOption3
+  colorOption3,
+  device
 } from "../../variables";
 
 const Dropdown = styled.nav`
@@ -21,19 +23,25 @@ const Dropdown = styled.nav`
   z-index: ${zIndexDropdown};
   background-color: transparent;
 
-  ul {
+  .navbar_list {
     width: 92%;
     display: flex;
     flex-direction: column;
     border-radius: ${borderRadiusSmall};
     background-color: ${colorOption5};
 
-    li {
+    .navbar_item {
       padding: ${spacingSmall};
 
-      a {
+      .navbar_link {
         font-size: ${fontSizeRegular};
         font-weight: ${fontWeightBold};
+      }
+
+      @media screen and ${device.width480} {
+        .navbar_link {
+          font-size: ${fontSizeNormal};
+        }
       }
     }
 

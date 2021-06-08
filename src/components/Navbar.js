@@ -53,12 +53,12 @@ const Navbar = () => {
         </figure>
         <Dropdown isOpen={isOpen} ref={dropdownMenu}>
           {
-            <ul>
+            <ul className="navbar_list">
               {navigation.map((option) => {
                 return (
-                  <div key={nanoid()}>
-                    <li>
-                      <Link to={`#${option}`}>{option}</Link>
+                  <div className="navbar_item-container" key={nanoid()}>
+                    <li className="navbar_item">
+                      <Link className="navbar_link" to={`#${option}`}>{option}</Link>
                     </li>
                     {option !== "Get Started" && (
                       <div className="divisor"></div>
