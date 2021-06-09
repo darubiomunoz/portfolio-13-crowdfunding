@@ -1,10 +1,21 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { borderRadiusSmall, colorOption3, colorOption3_5, colorOption5, fontSizeRegular, fontSizeSmall, fontWeightBold, spacingRegular, spacingSmall, zIndexModal } from '../../variables';
+import {
+  borderRadiusSmall,
+  colorOption3,
+  colorOption3_5,
+  colorOption5,
+  fontSizeRegular,
+  fontSizeSmall,
+  fontWeightBold,
+  spacingRegular,
+  spacingSmall,
+  zIndexModal,
+} from "../../variables";
 
 const ModalDefaultContainer = styled.div`
   width: 100vw;
-  height: fit-content;
+  height: 100%;
   max-height: 100vh;
   padding: ${spacingSmall} 0;
   position: fixed;
