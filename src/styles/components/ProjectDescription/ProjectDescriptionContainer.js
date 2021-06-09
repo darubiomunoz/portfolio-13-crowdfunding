@@ -31,6 +31,7 @@ const ProjectDescriptionContainer = styled.section`
   box-shadow: ${boxShadow};
 
   @media ${device.width480} {
+    padding: ${spacingNormal} ${spacingRegular};
     top: -7.5rem;
   }
 
@@ -53,6 +54,11 @@ const ProjectDescriptionContainer = styled.section`
     row-gap: ${spacingSmall};
     align-items: center;
     text-align: center;
+
+    @media ${device.width480} {
+      padding-top: ${spacingRegular};
+      row-gap: ${spacingRegular};
+    }
 
     .description_title {
       padding: 0 ${spacingNormal};

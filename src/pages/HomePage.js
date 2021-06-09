@@ -41,7 +41,7 @@ const HomePage = () => {
             />
           </picture>
           <Navbar />
-          <ProjectDescription />
+          <ProjectDescription /> 
           <ProjectStatistics />
           <About /> 
         </HomePageContainer>
