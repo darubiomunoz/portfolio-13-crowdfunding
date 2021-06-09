@@ -11,6 +11,7 @@ import {
   spacingRegular,
   spacingSmall,
   zIndexModal,
+  device
 } from "../../variables";
 
 const ModalDefaultContainer = styled.div`
@@ -26,6 +27,10 @@ const ModalDefaultContainer = styled.div`
   background-color: ${colorOption3_5};
   overflow-y: auto;
   z-index: ${zIndexModal};
+
+  @media ${device.height730} {
+    align-items: center;
+  }
 
   .modaldefault {
     width: 90%;

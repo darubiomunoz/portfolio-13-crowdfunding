@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: ${colorOption4};
   }
+
+  body {
+    position: relative;
+  }
 }
 `;
 

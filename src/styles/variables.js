@@ -42,6 +42,9 @@ export const breakpointWidth1024 = `(min-width: 1024px)`;
 export const breakpointWidth1280 = `(min-width: 1280px)`;
 export const breakpointWidth1440 = `(min-width: 1440px)`;
 
+export const breakpointHeight730 = `(min-height: 730px)`;
+
+
 export const device = {
   width240: breakpointWidth240,
   width280: breakpointWidth280,
@@ -60,6 +63,7 @@ export const device = {
   width1024: breakpointWidth1024,
   width1280: breakpointWidth1280,
   width1440: breakpointWidth1440,
+  height730: breakpointHeight730
 };
 
 export const spacingExtraSmall = `5px`;
