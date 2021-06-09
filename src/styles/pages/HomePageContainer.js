@@ -20,6 +20,8 @@ const HomePageContainer = styled.main`
     img {
       width: inherit;
       height: inherit;
+      object-fit: cover;
+      object-position: center;
     }
   }
 `;
