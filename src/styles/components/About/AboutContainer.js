@@ -10,7 +10,8 @@ import {
   spacingRegular,
   spacingSmall,
   device,
-  fontSizeNormal
+  fontSizeNormal,
+  spacingNormal
 } from "../../variables";
 
 const AboutContainer = styled.section`
@@ -24,6 +25,7 @@ const AboutContainer = styled.section`
   box-shadow: ${boxShadow};
 
   @media ${device.width480} {
+    padding: ${spacingNormal} ${spacingRegular};
     top: -7.5rem;
   }
 
@@ -44,6 +46,7 @@ const AboutContainer = styled.section`
     }
 
     .about_paragraph {
+      margin-top: ${spacingRegular};
       font-size: ${fontSizeRegular};
     }
   }

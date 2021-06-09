@@ -18,7 +18,8 @@ import {
   spacingSmall,
   device,
   fontSizeRegular,
-  fontSizeLarge
+  fontSizeLarge,
+  spacingNormal
 } from "../../variables";
 
 const PlanContainer = styled.div`
@@ -29,6 +30,12 @@ const PlanContainer = styled.div`
   position: relative;
   border-radius: ${borderRadiusExtraSmall};
   box-shadow: ${boxShadow};
+
+  @media ${device.width480} {
+    margin-top: ${spacingNormal};
+    padding: ${spacingRegular};
+    padding-bottom: ${spacingNormal};
+  }
 
   .plan_title,
   .plan_title-disabled {
@@ -132,11 +139,14 @@ const PlanContainer = styled.div`
 
     .plan_paragraph,
     .plan_paragraph-disabled {
+      margin-top: ${spacingNormal};
       font-size: ${fontSizeRegular};
     }
 
     .plan_counter,
     .plan_counter-disabled {
+      margin-top: ${spacingNormal};
+
       .counter_number,
       .counter_number-disabled {
         font-size: ${fontSizeLarge};
@@ -144,12 +154,14 @@ const PlanContainer = styled.div`
 
       .counter_text,
       .counter_text-disabled {
+        margin-left: ${spacingRegular};
         font-size: ${fontSizeRegular};
       }
     }
 
     .plan_button,
     .plan_button-disabled {
+      margin-top: ${spacingNormal};
       font-size: ${fontSizeRegular};
     }
   }
