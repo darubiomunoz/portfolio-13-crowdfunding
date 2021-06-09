@@ -1,6 +1,22 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { spacingSmall, colorOption3_5, zIndexModal, colorOption5, borderRadiusSmall, spacingRegular, fontSizeRegular, fontWeightBold, fontSizeSmall, colorOption3, borderRadiusRegular, colorOption1 } from '../../variables';
+import {
+  spacingSmall,
+  colorOption3_5,
+  zIndexModal,
+  colorOption5,
+  borderRadiusSmall,
+  spacingRegular,
+  fontSizeRegular,
+  fontWeightBold,
+  fontSizeSmall,
+  colorOption3,
+  borderRadiusRegular,
+  colorOption1,
+  device,
+  spacingNormal,
+  fontSizeNormal
+} from "../../variables";
 
 const ModalSuccessContainer = styled.div`
   width: 100vw;
@@ -17,6 +33,10 @@ const ModalSuccessContainer = styled.div`
   overflow-y: hidden;
   z-index: ${zIndexModal};
 
+  @media ${device.width480} {
+    padding: ${spacingRegular} 0;
+  }
+
   .modalsuccess_body {
     width: 90%;
     height: fit-content;
@@ -27,6 +47,11 @@ const ModalSuccessContainer = styled.div`
     row-gap: ${spacingSmall};
     border-radius: ${borderRadiusSmall};
     background-color: ${colorOption5};
+
+    @media ${device.width480} {
+      padding: ${spacingNormal};
+      row-gap: ${spacingRegular};
+    }
 
     .modalsuccess_image-container {
       width: 3rem;
@@ -56,6 +81,25 @@ const ModalSuccessContainer = styled.div`
       font-size: ${fontSizeSmall};
       background-color: ${colorOption1};
       color: ${colorOption5};
+    }
+
+    @media ${device.width480} {
+      .modalsuccess_image-container {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .modalsuccess_title {
+        font-size: ${fontSizeNormal};
+      }
+
+      .modalsuccess_description {
+        font-size: ${fontSizeRegular};
+      }
+
+      .modalsuccess_button {
+        font-size: ${fontSizeRegular};
+      }
     }
   }
 `;
