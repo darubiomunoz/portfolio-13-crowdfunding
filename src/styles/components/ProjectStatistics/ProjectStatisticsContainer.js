@@ -13,7 +13,8 @@ import {
   spacingSmall,
   device,
   fontSizeRegular,
-  fontSizeMedium
+  fontSizeMedium,
+  spacingNormal
 } from "../../variables";
 
 const ProjectStatisticsContainer = styled.section`
@@ -30,6 +31,8 @@ const ProjectStatisticsContainer = styled.section`
   box-shadow: ${boxShadow};
 
   @media ${device.width480} {
+    padding: ${spacingNormal} ${spacingRegular};
+    row-gap: ${spacingRegular};
     top: -7.5rem;
   }
 
