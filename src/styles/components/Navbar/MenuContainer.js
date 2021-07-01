@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { device } from '../../variables';
 
 const MenuContainer = styled.div`
-  width: fit-content;
+  width: 60%;
 
   .navbar_icon-container {
     width: 12.5px;
@@ -14,6 +14,10 @@ const MenuContainer = styled.div`
       height: 25px;
     }
 
+    @media screen and ${device.width1024} {
+      display: none;
+    }
+
     .navbar_icon {
       width: 100%;
       height: 100%;
@@ -22,3 +26,4 @@ const MenuContainer = styled.div`
 `;
 
 export default MenuContainer;
+ 

@@ -64,7 +64,7 @@ const Navbar = () => {
                       <div className="divisor"></div>
                     )}
                   </div>
-                );
+                ); 
               })}
             </ul>
           }

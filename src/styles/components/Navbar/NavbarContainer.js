@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingRegular, zIndexNormal } from '../../variables';
+import { spacingRegular, spacingNormal, zIndexNormal, device } from '../../variables';
 
 const NavbarContainer = styled.section`
   width: 100%;
@@ -12,6 +12,10 @@ const NavbarContainer = styled.section`
   top: 0;
   left: 0;
   z-index: ${zIndexNormal};
+
+   @media ${device.width1024} {
+     padding: ${spacingNormal};
+   }
 
   .navbar_image-container {
     width: 40%;
@@ -25,3 +29,4 @@ const NavbarContainer = styled.section`
 `;
 
 export default NavbarContainer;
+ 
