@@ -6,6 +6,7 @@ import ProjectDescriptionContainer from "../styles/components/ProjectDescription
 
 import mastercraftLogo from '../assets/logos/logo-mastercraft.svg';
 import bookmarkIcon from '../assets/icons/icon-bookmark.svg';
+import bookmarkedIcon from '../assets/icons/icon-bookmarked.svg';
 
 const ProjectDescription = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const ProjectDescription = () => {
       <div className="description_button-container">
         <button className="button_backthisproject" type="button" onClick={handleClick}>{projectDescriptionInfo.buttons.funding}</button>
         <button className="button_bookmark" type="button">
-          <img className="button_bookmark-icon" src={bookmarkIcon} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
+          <img className="button_bookmark-icon" src={bookmarkedIcon} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
         </button>
       </div>
     </ProjectDescriptionContainer>
