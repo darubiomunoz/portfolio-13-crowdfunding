@@ -14,6 +14,7 @@ import {
   spacingNormal,
   spacingRegular,
   colorOption1,
+  colorOption2,
   borderRadiusRegular,
   boxShadow,
   maxWidth,
@@ -121,6 +122,10 @@ const ProjectDescriptionContainer = styled.section`
       background-color: ${colorOption1};
       color: ${colorOption5};
       cursor: pointer;
+
+      &:hover {
+        background-color: ${colorOption2};
+      }
 
       @media ${device.width480} {
         font-size: ${fontSizeRegular};
