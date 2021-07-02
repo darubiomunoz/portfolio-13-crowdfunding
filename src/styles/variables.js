@@ -13,7 +13,7 @@ export const fontFamily = `'Commissioner', sans-serif`;
 
 export const fontSizeSmall = `10px`;
 export const fontSizeRegular = `12px`;
-export const fontSizeNormal = `16px`;
+export const fontSizeNormal = `16px`; 
 export const fontSizeMedium = `24px`;
 export const fontSizeLarge = `32px`;
 export const fontSizeExtraLarge = `48px`;
@@ -23,6 +23,8 @@ export const fontWeightLight = `300`;
 export const fontWeightNormal = `400`;
 export const fontWeightBold = `700`;
 export const fontWeightExtraBold = `900`;
+
+export const maxWidth = `700px`;
 
 export const breakpointWidth240 = `(min-width: 240px)`;
 export const breakpointWidth280 = `(min-width: 280px)`;
