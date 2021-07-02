@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import { openDefault } from '../features/modals/modalSlice';
@@ -9,13 +11,21 @@ import bookmarkIcon from '../assets/icons/icon-bookmark.svg';
 import bookmarkedIcon from '../assets/icons/icon-bookmarked.svg';
 
 const ProjectDescription = () => {
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
   const dispatch = useDispatch();
   const projectDescriptionInfo = useSelector(state => state.data.info[0].projectDescription);
   const defaultModal = useSelector(state => state.modals.default);
 
   const handleClick = () => {
     if (defaultModal === false) dispatch(openDefault());
-  }; 
+  };
+
+  const handleBookmarkClick = () => {
+    setIsBookmarked(!isBookmarked);
+  }
+
+  const bookmark = isBookmarked ? bookmarkedIcon : bookmarkIcon;
 
   return (
     <ProjectDescriptionContainer id="">
@@ -28,8 +38,8 @@ const ProjectDescription = () => {
       </article> 
       <div className="description_button-container">
         <button className="button_backthisproject" type="button" onClick={handleClick}>{projectDescriptionInfo.buttons.funding}</button>
-        <button className="button_bookmark" type="button">
-          <img className="button_bookmark-icon" src={bookmarkedIcon} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
+        <button className="button_bookmark" type="button" onClick={handleBookmarkClick}>
+          <img className="button_bookmark-icon" src={bookmark} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
         </button>
       </div>
     </ProjectDescriptionContainer>
