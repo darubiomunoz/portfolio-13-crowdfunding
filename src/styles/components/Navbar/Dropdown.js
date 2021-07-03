@@ -4,6 +4,7 @@ import {
   spacingSmall,
   borderRadiusSmall,
   colorOption5,
+  colorOption4,
   fontSizeRegular,
   fontSizeNormal,
   fontWeightBold,
@@ -56,12 +57,13 @@ const Dropdown = styled.nav`
       .navbar_link {
         font-size: ${fontSizeRegular};
         font-weight: ${fontWeightBold};
+        color: ${colorOption4};
 
         @media ${device.width480} {
           font-size: ${fontSizeNormal};
         }
 
-        @media ${device.wodth1024} {
+        @media ${device.width1024} {
           font-weight: ${fontWeightNormal};
           color: ${colorOption5};
         }
