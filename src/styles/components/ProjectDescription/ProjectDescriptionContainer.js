@@ -11,17 +11,22 @@ import {
   spacingSmall,
   fontWeightLight,
   colorOption3,
+  colorOption3_5,
+  colorOption4,
+  colorOption4_5,
   spacingNormal,
   spacingRegular,
+  spacingLarge,
   colorOption1,
   colorOption2,
+  colorOption2_5,
   borderRadiusRegular,
   boxShadow,
   maxWidth,
   device
 } from "../../variables";
 
-const ProjectDescriptionContainer = styled.section`
+export const ProjectDescriptionContainer = styled.section`
   width: 87%;
   max-width: ${maxWidth};
   padding: ${spacingRegular} ${spacingSmall};
@@ -110,6 +115,10 @@ const ProjectDescriptionContainer = styled.section`
       justify-content: space-evenly;
     }
 
+    /* @media ${device.width1024} {
+      justify-content: space-between;
+    } */
+
     button {
       border: none;
     }
@@ -135,24 +144,55 @@ const ProjectDescriptionContainer = styled.section`
         font-size: ${fontSizeNormal}
       }
     }
-
-    .button_bookmark {
-      width: 3rem;
-      height: 3rem;
-      background-color: transparent;
-      cursor: pointer;
-
-      @media ${device.width480} {
-        width: 5rem;
-        height: 5rem;
-      }
-
-      .button_bookmark-icon {
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 `;
 
-export default ProjectDescriptionContainer;
+export const Text = styled.p`
+    height: 100%;
+    padding: 0 ${spacingRegular};
+    display: none;
+    align-items: center;
+    font-size: ${fontSizeNormal};
+    font-weight: ${fontWeightBold};
+    color: ${props => !props.hover ? colorOption4_5 : colorOption2};
+    background-color: ${props => !props.hover ? colorOption3_5 : colorOption2_5};
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+
+    @media ${device.width1024} {
+      display: flex;
+    }
+`;
+
+export const BookmarkButton = styled.button`
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media ${device.width480} {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @media ${device.width1024} {
+    margin-right: 9rem;
+  }
+
+  .button_bookmark-container{
+    
+    @media ${device.width1024} {
+      height:100%;
+      display: flex;
+      align-items: center;
+      background-color: ${props => !props.hover ? colorOption3_5 : colorOption2_5};
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
+
+    .button_bookmark-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+`;

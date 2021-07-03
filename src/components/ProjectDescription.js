@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { openDefault } from '../features/modals/modalSlice';
 
-import ProjectDescriptionContainer from "../styles/components/ProjectDescription/ProjectDescriptionContainer";
+import { ProjectDescriptionContainer, Text, BookmarkButton } from "../styles/components/ProjectDescription/ProjectDescriptionContainer";
 
 import mastercraftLogo from '../assets/logos/logo-mastercraft.svg';
 import bookmarkIcon from '../assets/icons/icon-bookmark.svg';
@@ -38,9 +38,12 @@ const ProjectDescription = () => {
       </article> 
       <div className="description_button-container">
         <button className="button_backthisproject" type="button" onClick={handleClick}>{projectDescriptionInfo.buttons.funding}</button>
-        <button className="button_bookmark" type="button" onClick={handleBookmarkClick}>
-          <img className="button_bookmark-icon" src={bookmark} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
-        </button>
+        <BookmarkButton type="button" hover={isBookmarked} onClick={handleBookmarkClick} hover={isBookmarked}>
+          <div className="button_bookmark-container">
+            <img className="button_bookmark-icon" src={bookmark} alt="Bookmark icon. Press enter to bookmark the Mastercraft project" />
+            <Text hover={isBookmarked}>Bookmarked</Text>
+          </div>
+        </BookmarkButton>
       </div>
     </ProjectDescriptionContainer>
   );
