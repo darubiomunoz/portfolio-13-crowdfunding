@@ -4,6 +4,8 @@ import { device } from '../../variables';
 
 const MenuContainer = styled.div`
   width: 60%;
+  display: flex;
+  justify-content: flex-end;
 
   .navbar_icon-container {
     width: 12.5px;

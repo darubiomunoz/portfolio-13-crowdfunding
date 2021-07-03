@@ -43,7 +43,7 @@ const Navbar = () => {
       <figure className="navbar_image-container">
         <img className="navbar_image" src={logo} alt="Crowdfund logotype" />
       </figure>
-      <MenuContainer>
+      <MenuContainer> 
         <figure className="navbar_icon-container" onClick={handleClick}>
           <img className="navbar_icon"
             src={!isOpen ? burgerIcon : closeIcon}
