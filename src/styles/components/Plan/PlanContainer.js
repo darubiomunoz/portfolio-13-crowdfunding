@@ -19,7 +19,7 @@ import {
   device,
   fontSizeRegular,
   fontSizeLarge,
-  spacingNormal
+  spacingNormal,
 } from "../../variables";
 
 const PlanContainer = styled.div`
@@ -41,6 +41,10 @@ const PlanContainer = styled.div`
   .plan_title-disabled {
     font-size: ${fontSizeSmall};
     font-weight: ${fontWeightBold};
+
+    @media ${device.width480} {
+      font-size: ${fontSizeRegular};
+    }
   }
 
   .plan_title-disabled {
@@ -52,6 +56,10 @@ const PlanContainer = styled.div`
     font-size: ${fontSizeSmall};
     font-weight: ${fontWeightNormal};
     color: ${colorOption1};
+
+    @media ${device.width480} {
+      font-size: ${fontSizeRegular};
+    }
   }
 
   .plan_subtitle-disabled {
@@ -64,6 +72,11 @@ const PlanContainer = styled.div`
     font-size: ${fontSizeSmall};
     font-weight: ${fontWeightNormal};
     color: ${colorOption3};
+
+    @media ${device.width480} {
+      margin-top: ${spacingNormal};
+      font-size: ${fontSizeRegular};
+    }
   }
 
   .plan_paragraph-disabled {
@@ -76,10 +89,18 @@ const PlanContainer = styled.div`
     display: flex;
     align-items: center;
 
+    @media ${device.width480} {
+      margin-top: ${spacingNormal};
+    }
+
     .counter_number,
     .counter_number-disabled {
       font-size: ${fontSizeMedium};
       font-weight: ${fontWeightBold};
+
+      @media ${device.width480} {
+        font-size: ${fontSizeLarge};
+      }
     }
 
     .counter_text,
@@ -87,6 +108,11 @@ const PlanContainer = styled.div`
       margin-left: ${spacingSmall};
       font-size: ${fontSizeSmall};
       color: ${colorOption3};
+
+      @media ${device.width480} {
+        margin-left: ${spacingRegular};
+        font-size: ${fontSizeRegular};
+      }
     }
   }
 
@@ -109,6 +135,11 @@ const PlanContainer = styled.div`
     border-radius: ${borderRadiusRegular};
     background-color: ${colorOption1};
     color: ${colorOption5};
+
+    @media ${device.width480} {
+      margin-top: ${spacingNormal};
+      font-size: ${fontSizeRegular};
+    }
   }
 
   .plan_button-disabled {
@@ -124,46 +155,6 @@ const PlanContainer = styled.div`
     bottom: 0;
     left: 0;
     background-color: transparent;
-  }
-
-  @media ${device.width480} {
-    .plan_title,
-    .plan_title-disabled {
-      font-size: ${fontSizeRegular};
-    }
-
-    .plan_subtitle,
-    .plan_subtitle-disabled {
-      font-size: ${fontSizeRegular};
-    }
-
-    .plan_paragraph,
-    .plan_paragraph-disabled {
-      margin-top: ${spacingNormal};
-      font-size: ${fontSizeRegular};
-    }
-
-    .plan_counter,
-    .plan_counter-disabled {
-      margin-top: ${spacingNormal};
-
-      .counter_number,
-      .counter_number-disabled {
-        font-size: ${fontSizeLarge};
-      }
-
-      .counter_text,
-      .counter_text-disabled {
-        margin-left: ${spacingRegular};
-        font-size: ${fontSizeRegular};
-      }
-    }
-
-    .plan_button,
-    .plan_button-disabled {
-      margin-top: ${spacingNormal};
-      font-size: ${fontSizeRegular};
-    }
   }
 `;
 

@@ -27,7 +27,7 @@ const Plan = () => {
             </div>
             <button className={plan.daysLeft !== "0" ? "plan_button" : "plan_button-disabled"} type="button" onClick={handleClickOpen}>{plan.button}</button>
             {plan.daysLeft === "0" && <div className="screen"></div>}
-          </PlanContainer>
+          </PlanContainer> 
         );
       })}
     </>
