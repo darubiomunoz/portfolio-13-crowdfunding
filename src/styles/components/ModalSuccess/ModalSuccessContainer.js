@@ -17,7 +17,8 @@ import {
   spacingNormal,
   fontSizeNormal,
   maxWidthModalSuccess,
-  fontSizeMedium
+  fontSizeMedium,
+  colorOption2
 } from "../../variables";
 
 const ModalSuccessContainer = styled.div`
@@ -110,6 +111,11 @@ const ModalSuccessContainer = styled.div`
       font-size: ${fontSizeSmall};
       background-color: ${colorOption1};
       color: ${colorOption5};
+      cursor: pointer;
+
+      &:hover {
+        background-color: ${colorOption2};
+      }
 
       @media ${device.width480} {
         font-size: ${fontSizeRegular};
