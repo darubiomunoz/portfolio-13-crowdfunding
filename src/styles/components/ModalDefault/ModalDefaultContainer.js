@@ -11,7 +11,11 @@ import {
   spacingRegular,
   spacingSmall,
   zIndexModal,
-  device
+  device,
+  maxWidth,
+  fontSizeNormal,
+  fontSizeMedium,
+  spacingNormal
 } from "../../variables";
 
 const ModalDefaultContainer = styled.div`
@@ -34,6 +38,7 @@ const ModalDefaultContainer = styled.div`
 
   .modaldefault {
     width: 90%;
+    max-width: ${maxWidth};
     height: fit-content;
     padding: ${spacingRegular} ${spacingSmall};
     display: flex;
@@ -41,6 +46,11 @@ const ModalDefaultContainer = styled.div`
     row-gap: ${spacingSmall};
     border-radius: ${borderRadiusSmall};
     background-color: ${colorOption5};
+
+    @media ${device.width480} {
+      padding: ${spacingNormal} ${spacingRegular};
+      row-gap: ${spacingRegular};
+    }
 
     .modaldefault_header {
       display: flex;
@@ -50,11 +60,30 @@ const ModalDefaultContainer = styled.div`
       .default_title {
         font-size: ${fontSizeRegular};
         font-weight: ${fontWeightBold};
+
+        @media ${device.width480} {
+          font-size: ${fontSizeNormal};
+        }
+
+        @media ${device.width1024} {
+          font-size: ${fontSizeMedium};
+        }
       }
 
       .modaldefault_container-image {
-        width: 10px;
-        height: 10px;
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+
+        @media ${device.width480} {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        @media ${device.width1024} {
+          width: 2rem;
+          height: 2rem;
+        }
 
         .modaldefault_image {
           width: 100%;
@@ -66,6 +95,14 @@ const ModalDefaultContainer = styled.div`
     .default_subtitle {
       font-size: ${fontSizeSmall};
       color: ${colorOption3};
+
+      @media ${device.width480} {
+        font-size: ${fontSizeRegular};
+      }
+
+      @media ${device.width1024} {
+        font-size: ${fontSizeNormal};
+      }
     }
   }
 `;
