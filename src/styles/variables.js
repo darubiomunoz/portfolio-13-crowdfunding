@@ -13,7 +13,7 @@ export const fontFamily = `'Commissioner', sans-serif`;
 
 export const fontSizeSmall = `10px`;
 export const fontSizeRegular = `12px`;
-export const fontSizeNormal = `16px`; 
+export const fontSizeNormal = `16px`;
 export const fontSizeMedium = `24px`;
 export const fontSizeLarge = `32px`;
 export const fontSizeExtraLarge = `48px`;

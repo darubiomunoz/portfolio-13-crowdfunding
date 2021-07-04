@@ -28,7 +28,7 @@ const ProjectDescription = () => {
   const bookmark = isBookmarked ? bookmarkedIcon : bookmarkIcon;
 
   return (
-    <ProjectDescriptionContainer id="">
+    <ProjectDescriptionContainer id="About">
       <figure className="description_image-container">
         <img className="description_image" src={mastercraftLogo} alt="Mastercraft logotype" />
       </figure>

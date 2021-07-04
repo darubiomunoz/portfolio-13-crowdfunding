@@ -8,7 +8,7 @@ const ProjectStatistics = () => {
   );
 
   return (
-    <ProjectStatisticsContainer>
+    <ProjectStatisticsContainer id="Discover">
       <div className="statistics_container">
         <div className="statistics_info-container">
           <p className="statistics_figure">
