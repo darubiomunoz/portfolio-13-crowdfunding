@@ -8,14 +8,16 @@ import {
   fontSizeSmall,
   fontWeightBold,
   spacingRegular,
-  spacingSmall,
+  spacingSmall,  
   device,
   fontSizeNormal,
-  spacingNormal
+  spacingNormal,
+  maxWidth
 } from "../../variables";
 
 const AboutContainer = styled.section`
   width: 87%;
+  max-width: ${maxWidth};
   padding: ${spacingRegular} ${spacingSmall};
   display: flex;
   flex-direction: column;

@@ -72,7 +72,7 @@ export const spacingExtraSmall = `5px`;
 export const spacingSmall = `10px`;
 export const spacingRegular = `20px`;
 export const spacingNormal = `30px`;
-export const spacingMedium = `40px`;
+export const spacingMedium = `40px`; 
 export const spacingLarge = `50px`;
 export const spacingExtraLarge = `60px`;
 
