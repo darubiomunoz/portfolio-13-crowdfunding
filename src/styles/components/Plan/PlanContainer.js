@@ -19,7 +19,10 @@ import {
   device,
   fontSizeRegular,
   fontSizeLarge,
+  fontSizeNormal,
+  fontSizeExtraLarge,
   spacingNormal,
+  colorOption2,
 } from "../../variables";
 
 const PlanContainer = styled.div`
@@ -45,6 +48,10 @@ const PlanContainer = styled.div`
     @media ${device.width480} {
       font-size: ${fontSizeRegular};
     }
+
+    @media ${device.width1024} {
+      font-size: ${fontSizeNormal};
+    }
   }
 
   .plan_title-disabled {
@@ -59,6 +66,10 @@ const PlanContainer = styled.div`
 
     @media ${device.width480} {
       font-size: ${fontSizeRegular};
+    }
+
+    @media ${device.width1024} {
+      font-size: ${fontSizeNormal};
     }
   }
 
@@ -76,6 +87,10 @@ const PlanContainer = styled.div`
     @media ${device.width480} {
       margin-top: ${spacingNormal};
       font-size: ${fontSizeRegular};
+    }
+
+    @media ${device.width1024} {
+      font-size: ${fontSizeNormal};
     }
   }
 
@@ -101,6 +116,10 @@ const PlanContainer = styled.div`
       @media ${device.width480} {
         font-size: ${fontSizeLarge};
       }
+
+      @media ${device.width1024} {
+        font-size: ${fontSizeExtraLarge};
+      }
     }
 
     .counter_text,
@@ -112,6 +131,10 @@ const PlanContainer = styled.div`
       @media ${device.width480} {
         margin-left: ${spacingRegular};
         font-size: ${fontSizeRegular};
+      }
+
+      @media ${device.width1024} {
+        font-size: ${fontSizeNormal};
       }
     }
   }
@@ -135,10 +158,19 @@ const PlanContainer = styled.div`
     border-radius: ${borderRadiusRegular};
     background-color: ${colorOption1};
     color: ${colorOption5};
+    cursor: pointer;
+
+    &:hover {
+      background-color: ${colorOption2};
+    }
 
     @media ${device.width480} {
       margin-top: ${spacingNormal};
       font-size: ${fontSizeRegular};
+    }
+
+    @media ${device.width1024} {
+      font-size: ${fontSizeNormal};
     }
   }
 
