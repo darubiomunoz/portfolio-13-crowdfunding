@@ -15,7 +15,9 @@ import {
   colorOption1,
   device,
   spacingNormal,
-  fontSizeNormal
+  fontSizeNormal,
+  maxWidthModalSuccess,
+  fontSizeMedium
 } from "../../variables";
 
 const ModalSuccessContainer = styled.div`
@@ -39,6 +41,7 @@ const ModalSuccessContainer = styled.div`
 
   .modalsuccess_body {
     width: 90%;
+    max-width: ${maxWidthModalSuccess};
     height: fit-content;
     padding: ${spacingRegular};
     display: flex;
@@ -56,6 +59,16 @@ const ModalSuccessContainer = styled.div`
     .modalsuccess_image-container {
       width: 3rem;
       height: 3rem;
+
+      @media ${device.width480} {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      @media ${device.width1024} {
+        width: 7.5rem;
+        height: 7.5rem;
+      }
     }
 
     .modalsuccess_image {
@@ -66,12 +79,28 @@ const ModalSuccessContainer = styled.div`
     .modalsuccess_title {
       font-size: ${fontSizeRegular};
       font-weight: ${fontWeightBold};
+
+      @media ${device.width480} {
+        font-size: ${fontSizeNormal};
+      }
+
+      @media ${device.width1024} {
+        font-size: ${fontSizeMedium};
+      }
     }
 
     .modalsuccess_description {
       text-align: center;
       font-size: ${fontSizeSmall};
       color: ${colorOption3};
+
+      @media ${device.width480} {
+        font-size: ${fontSizeRegular};
+      }
+
+      @media ${device.width1024} {
+        font-size: ${fontSizeNormal};
+      }
     }
 
     .modalsuccess_button {
@@ -81,24 +110,13 @@ const ModalSuccessContainer = styled.div`
       font-size: ${fontSizeSmall};
       background-color: ${colorOption1};
       color: ${colorOption5};
-    }
 
-    @media ${device.width480} {
-      .modalsuccess_image-container {
-        width: 5rem;
-        height: 5rem;
+      @media ${device.width480} {
+        font-size: ${fontSizeRegular};
       }
 
-      .modalsuccess_title {
+      @media ${device.width1024} {
         font-size: ${fontSizeNormal};
-      }
-
-      .modalsuccess_description {
-        font-size: ${fontSizeRegular};
-      }
-
-      .modalsuccess_button {
-        font-size: ${fontSizeRegular};
       }
     }
   }

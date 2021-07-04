@@ -18,13 +18,14 @@ export const fontSizeMedium = `24px`;
 export const fontSizeLarge = `32px`;
 export const fontSizeExtraLarge = `48px`;
 
-export const fontWeightExtraLight = `200`;
+export const fontWeightExtraLight = `200`; 
 export const fontWeightLight = `300`;
 export const fontWeightNormal = `400`;
 export const fontWeightBold = `700`;
 export const fontWeightExtraBold = `900`;
 
 export const maxWidth = `700px`;
+export const maxWidthModalSuccess = `500px`;
 
 export const breakpointWidth240 = `(min-width: 240px)`;
 export const breakpointWidth280 = `(min-width: 280px)`;

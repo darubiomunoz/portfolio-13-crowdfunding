@@ -14,7 +14,7 @@ const ModalSuccess = () => {
     dispatch(closeSuccess());
   }
 
-  return (
+  return ( 
     <ModalSuccessContainer>
       <div className="modalsuccess_body">
         <figure className="modalsuccess_image-container">
