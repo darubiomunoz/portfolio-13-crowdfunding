@@ -11,6 +11,7 @@ import {
   spacingSmall,  
   device,
   fontSizeNormal,
+  fontSizeMedium,
   spacingNormal,
   maxWidth
 } from "../../variables";
@@ -34,22 +35,29 @@ const AboutContainer = styled.section`
   .about_title {
     font-size: ${fontSizeRegular};
     font-weight: ${fontWeightBold};
+
+    @media ${device.width480} {
+      font-size: ${fontSizeNormal};
+    }
+
+    @media ${device.width1024} {
+      font-size: ${fontSizeMedium};
+    }
   }
 
   .about_paragraph {
     margin-top: ${spacingSmall};
     font-size: ${fontSizeSmall};
     color: ${colorOption3};
-  }
 
-  @media ${device.width480} {
-    .about_title {
-      font-size: ${fontSizeNormal};
-    }
-
-    .about_paragraph {
+    @media ${device.width480} {
       margin-top: ${spacingRegular};
       font-size: ${fontSizeRegular};
+    }
+
+    @media ${device.width1024} {
+      font-size: ${fontSizeNormal};
+      line-height: ${spacingRegular};
     }
   }
 `;
