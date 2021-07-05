@@ -107,7 +107,7 @@ const Pledge = () => {
               </div>
             </section>
           )}
-        </PledgeContainer>
+        </PledgeContainer> 
       );
     })}
     </>
