@@ -1,3 +1,5 @@
+import React, { Fragment } from "react";
+
 import { useSelector, useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 
@@ -14,7 +16,7 @@ const Plan = () => {
   };
 
   return (
-    <>
+    <Fragment>
       {planInfo.map((plan) => {
         return (
           <PlanContainer key={nanoid()}>
@@ -86,7 +88,7 @@ const Plan = () => {
           </PlanContainer>
         );
       })}
-    </>
+    </Fragment>
   );
 };
 

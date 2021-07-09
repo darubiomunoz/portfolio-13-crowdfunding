@@ -1,21 +1,23 @@
-import { useSelector, useDispatch } from 'react-redux';
+import React from "react";
 
-import ModalDefaultContainer from '../styles/components/ModalDefault/ModalDefaultContainer';
+import { useSelector, useDispatch } from "react-redux";
 
-import closeIcon from '../assets/icons/icon-close-modal.svg';
+import ModalDefaultContainer from "../styles/components/ModalDefault/ModalDefaultContainer";
 
-import { closeDefault } from '../features/modals/modalSlice';
+import closeIcon from "../assets/icons/icon-close-modal.svg";
 
-import Pledge from './Pledge';
+import { closeDefault } from "../features/modals/modalSlice";
+
+import Pledge from "./Pledge";
 
 const ModalDefault = () => {
   const dispatch = useDispatch();
-  const defaultInfo = useSelector(state => state.data.info[0].modals.default);
-  const defaultStatus = useSelector(state => state.modals.default);
+  const defaultInfo = useSelector((state) => state.data.info[0].modals.default);
+  const defaultStatus = useSelector((state) => state.modals.default);
 
   const handleClosingClick = () => {
     if (defaultStatus) dispatch(closeDefault());
-  }
+  };
 
   return (
     <ModalDefaultContainer>
@@ -23,8 +25,13 @@ const ModalDefault = () => {
         <div className="modaldefault_header">
           <h3 className="default_title">{defaultInfo.title}</h3>
           <figure className="modaldefault_container-image">
-            <img className="modaldefault_image" src={closeIcon} alt="Press enter to close the modal" onClick={handleClosingClick} />
-          </figure> 
+            <img
+              className="modaldefault_image"
+              src={closeIcon}
+              alt="Press enter to close the modal"
+              onClick={handleClosingClick}
+            />
+          </figure>
         </div>
         <p className="default_subtitle">{defaultInfo.subtitle}</p>
         <Pledge />

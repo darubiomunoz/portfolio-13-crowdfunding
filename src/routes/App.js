@@ -1,8 +1,10 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from "react";
 
-import GlobalStyle from '../styles/globalStyles';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import HomePage from '../pages/HomePage';
+import GlobalStyle from "../styles/globalStyles";
+
+import HomePage from "../pages/HomePage";
 
 const App = () => {
   return (

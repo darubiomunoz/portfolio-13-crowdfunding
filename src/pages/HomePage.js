@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import HomePageContainer from '../styles/pages/HomePageContainer';
@@ -25,10 +25,10 @@ const HomePage = () => {
   }, [dataStatus, dispatch]);
 
   return (
-    <>
+    <Fragment>
       {dataStatus !== "fulfilled" && <h1>loading...</h1>}
       {dataStatus === "fulfilled" && (
-        <>
+        <Fragment>
         <HomePageContainer>
           <picture>
             <source
@@ -47,9 +47,9 @@ const HomePage = () => {
         </HomePageContainer>
         {defaultState && <ModalDefault />}
         {successState && <ModalSuccess />}
-        </>
+        </Fragment>
       )}
-    </>
+    </Fragment>
   );
 } 
 
