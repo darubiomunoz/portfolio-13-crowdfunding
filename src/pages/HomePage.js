@@ -29,24 +29,24 @@ const HomePage = () => {
       {dataStatus !== "fulfilled" && <h1>loading...</h1>}
       {dataStatus === "fulfilled" && (
         <Fragment>
-        <HomePageContainer>
-          <picture>
-            <source
-              media={breakpointWidth1024}
-              srcSet="https://i.postimg.cc/02yQRXwr/image-hero-desktop.jpg"
-            />
-            <img
-              src="https://i.postimg.cc/85g521RV/image-hero-mobile.jpg"
-              alt="Background. Desktop with a desktop computer"
-            />
-          </picture>
-          <Navbar />
-          <ProjectDescription />
-          <ProjectStatistics />
-          <About />
-        </HomePageContainer>
-        {defaultState && <ModalDefault />}
-        {successState && <ModalSuccess />}
+          <HomePageContainer>
+            <picture>
+              <source
+                media={breakpointWidth1024}
+                srcSet="https://i.postimg.cc/02yQRXwr/image-hero-desktop.jpg"
+              />
+              <img
+                src="https://i.postimg.cc/85g521RV/image-hero-mobile.jpg"
+                alt="Background. Desktop with a desktop computer"
+              />
+            </picture>
+            <Navbar />
+            <ProjectDescription />
+            <ProjectStatistics />
+            <About />
+          </HomePageContainer>
+          {defaultState && <ModalDefault />}
+          {successState && <ModalSuccess />}
         </Fragment>
       )}
     </Fragment>

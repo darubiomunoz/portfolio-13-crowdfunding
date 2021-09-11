@@ -41,9 +41,9 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <figure className="navbar_image-container">
-        <img className="navbar_image" src={logo} alt="Crowdfund logotype" />
+        <img className="navbar_image" src={logo} alt="Crowdfund logotype" data-testid='logoTestId' />
       </figure>
-      <MenuContainer> 
+      <MenuContainer>
         <figure className="navbar_icon-container" onClick={handleClick}>
           <img className="navbar_icon"
             src={!isOpen ? burgerIcon : closeIcon}
@@ -64,7 +64,7 @@ const Navbar = () => {
                       <div className="divisor"></div>
                     )}
                   </div>
-                ); 
+                );
               })}
             </ul>
           }
