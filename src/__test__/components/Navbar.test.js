@@ -2,10 +2,11 @@ import { render } from '@testing-library/react';
 
 import Navbar from '../../components/Navbar';
 
-describe('Navbar Component Tests', () => {
-  test('if the logo is rendered', () => {
+describe('Navbar component tests', () => {
+  test('If it renders', () => {
     const { getByTestId } = render(<Navbar />);
-    const Logo = getByTestId("logoTestId");
+    const logo = getByTestId('logoTestId');
 
-    expect(Logo).toBeTruthy()});
+    expect(logo).toBeTruthy();
+  })
 });
