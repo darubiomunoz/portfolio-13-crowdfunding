@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.15.4",
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
@@ -15,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(<jest>)/)'",
+    "test": "react-scripts test",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "eject": "react-scripts eject"
@@ -36,14 +37,22 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.15.6",
-    "jest": "^27.0.6",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.3.0",
-    "webpack-dev-server": "^3.11.1"
+    "styled-components": "^5.3.0"
   },
   "transform": {
     "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css)$": "identity-obj-proxy",
+      "^@project-name/(.*)/(.*)/(.*)$": "<rootDir>/../../packages/$1/src/$2/$3",
+      "^@project-name/(.*)/(.*)$": "<rootDir>/../../packages/$1/src/$2",
+      "^@project-name/(.*)$": "<rootDir>/../../packages/$1/src"
+    }
   }
 }
