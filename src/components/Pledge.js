@@ -107,6 +107,7 @@ const Pledge = () => {
                     className="fields_amount-pledge"
                     type="number"
                     placeholder={`$ ${pledge.end[1]}`}
+                    min="0"
                     required
                   />
                   <button
