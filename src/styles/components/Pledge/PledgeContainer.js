@@ -191,6 +191,7 @@ const PledgeContainer = styled.label`
         font-weight: ${fontWeightBold};
         background-color: transparent;
         outline: none;
+        cursor: pointer;
 
         @media ${device.width480} {
           font-size: ${fontSizeRegular};
