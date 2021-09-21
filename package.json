@@ -41,6 +41,7 @@
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.15.6",
     "@testing-library/jest-dom": "^5.14.1",
+    "msw": "^0.35.0",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.3.0"
   },

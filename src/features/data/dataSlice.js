@@ -41,4 +41,6 @@ export const dataSlice = createSlice({
   }
 });
 
+export { initialState };
+
 export default dataSlice.reducer;

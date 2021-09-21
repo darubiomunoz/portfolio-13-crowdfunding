@@ -1,13 +1,34 @@
-import { render } from '@testing-library/react';
+// import React from "react";
 
-import Navbar from '../../components/Navbar';
+// import { rest } from "msw";
 
-describe('Navbar component tests', () => {
-  it('If it renders', () => {
-    const { getByTestId } = render(<Navbar />);
-    const logo = getByTestId('logoTestId');
+// import { setupServer } from "msw/node";
 
-    expect(logo).toBeTruthy();
-  });
-  
-});
+// import { render, fireEvent, screen } from "../utils/renderConnected";
+
+// import Navbar from "../../components/Navbar";
+
+// import { apiResponse } from '../utils/apiResponse';
+
+// export const handlers = [
+//  rest.get("/api/data", (req, res, ctx) => {
+//    return res(ctx.json(apiResponse), ctx.delay(0));
+//  }),
+// ];
+
+// const server = setupServer(...handlers);
+
+// beforeAll(() => server.listen());
+
+// describe('Navbar component tests', () => {
+//   it("renders the burger menu?", async () => {
+//     render(<Navbar />);
+
+//     const burgerMenu = screen.getByTestId('burgerMenuTestId');
+//     expect(burgerMenu).toBeInTheDocument();
+//   });
+// });
+
+// afterEach(() => server.resetHandlers());
+
+// afterAll(() => server.close());

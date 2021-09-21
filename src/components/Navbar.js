@@ -49,6 +49,7 @@ const Navbar = () => {
             src={!isOpen ? burgerIcon : closeIcon}
             alt="Burger Icon. Press enter to open the navigation menu"
             ref={menuIcon}
+            data-testid="burgerMenuTestId"
           />
         </figure>
         <Dropdown isOpen={isOpen} ref={dropdownMenu}>
