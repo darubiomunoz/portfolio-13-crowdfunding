@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import ModalDefaultContainer from "../styles/components/ModalDefault/ModalDefaultContainer";
 
 import closeIcon from "../assets/icons/icon-close-modal.svg";
+import closeIconBlack from "../assets/icons/icon-close-modal-black.svg";
 
 import { closeDefault } from "../features/modals/modalSlice";
 
@@ -37,7 +38,7 @@ const ModalDefault = () => {
         <Pledge />
       </main>
     </ModalDefaultContainer>
-  );
+  ); 
 };
 
 export default ModalDefault;

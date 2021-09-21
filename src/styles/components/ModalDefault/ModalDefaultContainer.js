@@ -89,6 +89,11 @@ const ModalDefaultContainer = styled.div`
           width: 100%;
           height: 100%;
         }
+
+        .modaldefault_image:hover {
+          color: black;
+          transform: scale(1.4);
+        }
       }
     }
 
