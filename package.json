@@ -43,6 +43,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "msw": "^0.35.0",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.3",
     "styled-components": "^5.3.0"
   },
   "transform": {

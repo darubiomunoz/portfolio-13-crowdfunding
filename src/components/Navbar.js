@@ -19,7 +19,7 @@ const Navbar = () => {
     (state) => state.data.info[0].navbar.navigation
   );
 
-  const handleClick = () => {
+  const handleClick = () => { 
     setIsOpen(!isOpen);
   };
 
@@ -37,6 +37,27 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+
+  const hrefNavigation = (option) => {
+    let href = '';
+
+    switch (option) {
+      case "About":
+        href = '#about';
+        break;
+      case "Discover":
+        href = "discover";
+        break;
+      case "Get Started":
+        href = "get_started";
+        break;
+      default:
+        href = "";
+    }
+
+    return href;
+  };
 
   return (
     <NavbarContainer>
@@ -59,7 +80,7 @@ const Navbar = () => {
                 return (
                   <div className="navbar_item-container" key={nanoid()}>
                     <li className="navbar_item">
-                      <Link className="navbar_link" to={`#${option}`}>{option}</Link>
+                      <Link className="navbar_link" to='#Discover'>{option}</Link>
                     </li>
                     {option !== "Get Started" && (
                       <div className="divisor"></div>
@@ -69,6 +90,7 @@ const Navbar = () => {
               })}
             </ul>
           }
+          {console.log(navigation)}
         </Dropdown>
       </MenuContainer>
     </NavbarContainer>
