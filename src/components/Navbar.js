@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { nanoid } from "@reduxjs/toolkit";
 
 import NavbarContainer from "../styles/components/Navbar/NavbarContainer";
@@ -38,27 +38,6 @@ const Navbar = () => {
     };
   }, []);
 
-
-  const hrefNavigation = (option) => {
-    let href = '';
-
-    switch (option) {
-      case "About":
-        href = '#about';
-        break;
-      case "Discover":
-        href = "discover";
-        break;
-      case "Get Started":
-        href = "get_started";
-        break;
-      default:
-        href = "";
-    }
-
-    return href;
-  };
-
   return (
     <NavbarContainer>
       <figure className="navbar_image-container">
@@ -80,7 +59,7 @@ const Navbar = () => {
                 return (
                   <div className="navbar_item-container" key={nanoid()}>
                     <li className="navbar_item">
-                      <Link className="navbar_link" to='#Discover'>{option}</Link>
+                      <Link className="navbar_link" to={`#${option}`}>{option}</Link>
                     </li>
                     {option !== "Get Started" && (
                       <div className="divisor"></div>
