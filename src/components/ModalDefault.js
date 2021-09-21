@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -12,6 +12,8 @@ import { closeDefault } from "../features/modals/modalSlice";
 import Pledge from "./Pledge";
 
 const ModalDefault = () => {
+  const [ hover, setHover ] = useState(false);
+
   const dispatch = useDispatch();
   const defaultInfo = useSelector((state) => state.data.info[0].modals.default);
   const defaultStatus = useSelector((state) => state.modals.default);
@@ -20,17 +22,27 @@ const ModalDefault = () => {
     if (defaultStatus) dispatch(closeDefault());
   };
 
+  const handleHoverIn = () => {
+    setHover(true);
+  }
+
+  const handleHoverOut = () => {
+    setHover(false);
+  }
+
   return (
-    <ModalDefaultContainer>
+    <ModalDefaultContainer >
       <main className="modaldefault">
         <div className="modaldefault_header">
           <h3 className="default_title">{defaultInfo.title}</h3>
           <figure className="modaldefault_container-image">
             <img
               className="modaldefault_image"
-              src={closeIcon}
+              src={hover ? closeIconBlack : closeIcon}
               alt="Press enter to close the modal"
               onClick={handleClosingClick}
+              onMouseEnter={handleHoverIn}
+              onMouseLeave={handleHoverOut}
             />
           </figure>
         </div>
