@@ -1,5 +1,6 @@
 {
   "name": "project-13-crowdfunding",
+  "homepage": "http://darubiomunoz.github.io/portfolio-13-crowdfunding",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +20,9 @@
     "test": "react-scripts test",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
