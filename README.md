@@ -2,13 +2,13 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
-Project Link: [https://darubiomunoz.github.io/portfolio-11-countries](https://darubiomunoz.github.io/portfolio-11-countries)
+Project Link: [https://darubiomunoz.github.io/portfolio-13-crowdfunding](https://darubiomunoz.github.io/portfolio-13-crowdfunding)
 <br />
 <p align="center">
-  <a href="https://darubiomunoz.github.io/portfolio-11-countries">
+  <a href="https://darubiomunoz.github.io/portfolio-13-crowdfunding">
     <img src="./src/assets/images/readme-logo.svg" alt="Logo" width="200" height="200">
   </a>
-  <h1 align="center">Countries</h1>
+  <h1 align="center">Crowdfunding</h1>
   <p align="center">
     ReactJS
     <br />
@@ -95,7 +95,6 @@ If you want to check out the website in production with github pages visit the l
    ```
 
 2. Clone the repo
-   ```sh
    git clone https://github.com/darubiomunoz/portfolio-11-countries.git
    ```
    ```sh
