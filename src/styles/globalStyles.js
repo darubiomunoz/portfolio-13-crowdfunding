@@ -1,8 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { normalize } from 'styled-normalize';
+
 import { fontFamily, colorOption4 } from './variables'
 
 const GlobalStyle = createGlobalStyle`
+${normalize}
+
 *{
   padding: 0;
   margin: 0;
