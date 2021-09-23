@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/portfolio-13-crowdfunding/static/js/main.9ceeff96.chunk.js",
-    "main.js.map": "/portfolio-13-crowdfunding/static/js/main.9ceeff96.chunk.js.map",
+    "main.js": "/portfolio-13-crowdfunding/static/js/main.eb89c1cc.chunk.js",
+    "main.js.map": "/portfolio-13-crowdfunding/static/js/main.eb89c1cc.chunk.js.map",
     "runtime-main.js": "/portfolio-13-crowdfunding/static/js/runtime-main.9994c615.js",
     "runtime-main.js.map": "/portfolio-13-crowdfunding/static/js/runtime-main.9994c615.js.map",
     "static/js/2.f0f6bebc.chunk.js": "/portfolio-13-crowdfunding/static/js/2.f0f6bebc.chunk.js",
@@ -21,6 +21,6 @@
   "entrypoints": [
     "static/js/runtime-main.9994c615.js",
     "static/js/2.f0f6bebc.chunk.js",
-    "static/js/main.9ceeff96.chunk.js"
+    "static/js/main.eb89c1cc.chunk.js"
   ]
 }
