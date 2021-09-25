@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <figure className="navbar_image-container">
-        <img className="navbar_image" src={logo} alt="Crowdfund logotype" data-testid='logoTestId' />
+        <img className="navbar_image" src={logo} tabIndex="0" alt="Crowdfund logotype" data-testid='logoTestId' />
       </figure>
       <MenuContainer>
         <figure className="navbar_icon-container" onClick={handleClick}>
