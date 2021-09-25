@@ -32,7 +32,7 @@ const HomePage = () => {
         <Fragment>
           <HomePageContainer>
             <Link to={`#About`} className="skiplink" tabIndex="1">Go to the main content</Link>
-            <picture className="homepage_background-container">
+            <picture className="homepage_background-container" tabIndex="0">
               <source
                 media={breakpointWidth1024}
                 srcSet="https://i.postimg.cc/02yQRXwr/image-hero-desktop.jpg"
@@ -41,6 +41,7 @@ const HomePage = () => {
                 className="homepage_background"
                 src="https://i.postimg.cc/85g521RV/image-hero-mobile.jpg"
                 alt="Background. Desktop with a desktop computer"
+                tabIndex="0"
               />
             </picture>
             <Navbar />
