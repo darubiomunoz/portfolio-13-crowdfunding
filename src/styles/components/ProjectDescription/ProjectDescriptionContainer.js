@@ -132,7 +132,8 @@ export const ProjectDescriptionContainer = styled.section`
       color: ${colorOption5};
       cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: ${colorOption2};
       }
 

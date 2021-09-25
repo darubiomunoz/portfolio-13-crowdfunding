@@ -30,11 +30,11 @@ const ProjectDescription = () => {
   return (
     <ProjectDescriptionContainer id="About">
       <figure className="description_image-container">
-        <img className="description_image" src={mastercraftLogo} alt="Mastercraft logotype" />
+        <img className="description_image" src={mastercraftLogo} tabIndex="0" alt="Mastercraft logotype" />
       </figure>
       <article className="description_info-container">
-        <h1 className="description_title">{projectDescriptionInfo.name}</h1>
-        <p className="description_text">{projectDescriptionInfo.purpose}</p>
+        <h1 className="description_title" tabIndex="0">{projectDescriptionInfo.name}</h1>
+        <p className="description_text" tabIndex="0">{projectDescriptionInfo.purpose}</p>
       </article> 
       <div className="description_button-container">
         <button className="button_backthisproject" type="button" onClick={handleClick}>{projectDescriptionInfo.buttons.funding}</button>
