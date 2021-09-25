@@ -13,28 +13,28 @@ const ProjectStatistics = () => {
     <ProjectStatisticsContainer id="Discover">
       <div className="statistics_container">
         <div className="statistics_info-container">
-          <p className="statistics_figure">
+          <p className="statistics_figure" tabIndex="0">
             {projectStatisticsInfo.money.figure}
           </p>
-          <span className="statistics_subparagraph">
+          <span className="statistics_subparagraph" tabIndex="0">
             {projectStatisticsInfo.money.text}
           </span>
         </div>
         <span className="statistics_divisor"></span>
         <div className="statistics_info-container">
-          <p className="statistics_figure">
+          <p className="statistics_figure" tabIndex="0">
             {projectStatisticsInfo.backers.figure}
           </p>
-          <span className="statistics_subparagraph">
+          <span className="statistics_subparagraph" tabIndex="0">
             {projectStatisticsInfo.backers.text}
           </span>
         </div>
         <span className="statistics_divisor"></span>
         <div className="statistics_info-container">
-          <p className="statistics_figure">
+          <p className="statistics_figure" tabIndex="0">
             {projectStatisticsInfo.time.figure}
           </p>
-          <span className="statistics_subparagraph">
+          <span className="statistics_subparagraph" tabIndex="0">
             {projectStatisticsInfo.time.text}
           </span>
         </div>
