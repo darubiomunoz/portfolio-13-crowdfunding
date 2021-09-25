@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -14,9 +14,15 @@ import Pledge from "./Pledge";
 const ModalDefault = () => {
   const [ hover, setHover ] = useState(false);
 
+  const modalStart = useRef(null);
+
   const dispatch = useDispatch();
   const defaultInfo = useSelector((state) => state.data.info[0].modals.default);
   const defaultStatus = useSelector((state) => state.modals.default);
+
+  useEffect(() => {
+    if (defaultStatus) modalStart.current.focus();
+  }, [defaultStatus]);
 
   const handleClosingClick = () => {
     if (defaultStatus) dispatch(closeDefault());
@@ -31,10 +37,12 @@ const ModalDefault = () => {
   }
 
   return (
-    <ModalDefaultContainer >
+    <ModalDefaultContainer>
       <main className="modaldefault">
         <div className="modaldefault_header">
-          <h3 className="default_title">{defaultInfo.title}</h3>
+          <h3 className="default_title" tabIndex="0" ref={modalStart}>
+            {defaultInfo.title}
+          </h3>
           <figure className="modaldefault_container-image">
             <img
               className="modaldefault_image"
@@ -43,10 +51,13 @@ const ModalDefault = () => {
               onClick={handleClosingClick}
               onMouseEnter={handleHoverIn}
               onMouseLeave={handleHoverOut}
+              tabIndex="0"
             />
           </figure>
         </div>
-        <p className="default_subtitle">{defaultInfo.subtitle}</p>
+        <p className="default_subtitle" tabIndex="0">
+          {defaultInfo.subtitle}
+        </p>
         <Pledge />
       </main>
     </ModalDefaultContainer>
