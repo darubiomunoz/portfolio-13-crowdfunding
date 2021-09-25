@@ -43,6 +43,7 @@ const Pledge = () => {
                   onClick={(event) => handleClickSelection(event)}
                   checked={pledge.title === selection ? true : false}
                   readOnly
+                  aria-label={pledge.title}
                 />
                 <div className="header_titles">
                   <h3
@@ -108,6 +109,7 @@ const Pledge = () => {
                     type="number"
                     placeholder={`$ ${pledge.end[1]}`}
                     min={pledge.end[1]}
+                    aria-label="Enter the amount of money to donate."
                     required
                   />
                   <button

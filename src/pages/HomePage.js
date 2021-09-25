@@ -1,5 +1,6 @@
 import React, { useEffect, Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import HomePageContainer from '../styles/pages/HomePageContainer';
 
@@ -30,6 +31,9 @@ const HomePage = () => {
       {dataStatus === "fulfilled" && (
         <Fragment>
           <HomePageContainer>
+            <div className="skiplink_container">
+              <Link to="#Get Stated">Go to the main content</Link>
+            </div>
             <picture>
               <source
                 media={breakpointWidth1024}
