@@ -25,6 +25,7 @@ const Plan = () => {
                 className={
                   plan.daysLeft !== "0" ? "plan_title" : "plan_title-disabled"
                 }
+                tabIndex={plan.daysLeft === "0" ? "-1" : "0"}
               >
                 {plan.title}
               </h2>
@@ -34,6 +35,7 @@ const Plan = () => {
                     ? "plan_subtitle"
                     : "plan_subtitle-disabled"
                 }
+                tabIndex={plan.daysLeft === "0" ? "-1" : "0"}
               >
                 {plan.subtitle}
               </h3>
@@ -44,6 +46,7 @@ const Plan = () => {
                   ? "plan_paragraph"
                   : "plan_paragraph-disabled"
               }
+              tabIndex={plan.daysLeft === "0" ? "-1" : "0"}
             >
               {plan.description}
             </p>
@@ -61,6 +64,7 @@ const Plan = () => {
                       ? "counter_number"
                       : "counter_number-disabled"
                   }
+                  tabIndex={plan.daysLeft === "0" ? "-1" : "0"}
                 >
                   {plan.daysLeft}
                 </span>
@@ -70,6 +74,7 @@ const Plan = () => {
                       ? "counter_text"
                       : "counter_text-disabled"
                   }
+                  tabIndex={plan.daysLeft === "0" ? "-1" : "0"}
                 >
                   left
                 </p>
@@ -80,6 +85,7 @@ const Plan = () => {
                 }
                 type="button"
                 onClick={handleClickOpen}
+                tabIndex={plan.daysLeft === "0" ? "-1" : "0"}
               >
                 {plan.button}
               </button>

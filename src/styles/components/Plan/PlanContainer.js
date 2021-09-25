@@ -181,7 +181,8 @@ const PlanContainer = styled.div`
       color: ${colorOption5};
       cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: ${colorOption2};
       }
 
