@@ -31,15 +31,14 @@ const HomePage = () => {
       {dataStatus === "fulfilled" && (
         <Fragment>
           <HomePageContainer>
-            <div className="skiplink_container">
-              <Link to="#Get Stated">Go to the main content</Link>
-            </div>
-            <picture>
+            <Link to={`#About`} className="skiplink" tabIndex="1">Go to the main content</Link>
+            <picture className="homepage_background-container">
               <source
                 media={breakpointWidth1024}
                 srcSet="https://i.postimg.cc/02yQRXwr/image-hero-desktop.jpg"
               />
               <img
+                className="homepage_background"
                 src="https://i.postimg.cc/85g521RV/image-hero-mobile.jpg"
                 alt="Background. Desktop with a desktop computer"
               />
