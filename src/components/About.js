@@ -11,9 +11,15 @@ const About = () => {
 
   return (
     <AboutContainer id="Get Started">
-      <h2 className="about_title">{aboutInfo.title}</h2>
-      <p className="about_paragraph">{aboutInfo.description.paragraph1}</p>
-      <p className="about_paragraph">{aboutInfo.description.paragraph2}</p>
+      <h2 className="about_title" tabIndex="0">
+        {aboutInfo.title}
+      </h2>
+      <p className="about_paragraph" tabIndex="0">
+        {aboutInfo.description.paragraph1}
+      </p>
+      <p className="about_paragraph" tabIndex="0">
+        {aboutInfo.description.paragraph2}
+      </p>
       <Plan />
     </AboutContainer>
   );
