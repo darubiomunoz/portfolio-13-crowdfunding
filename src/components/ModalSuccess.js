@@ -25,11 +25,12 @@ const ModalSuccess = () => {
           <img
             className="modalsuccess_image"
             src={successLogo}
-            alt="Checked Icon"
+            alt="Checked Icon. Successfull donation made."
+            tabIndex="0"
           />
-        </figure>
-        <h3 className="modalsuccess_title">{modalSuccessInfo.title}</h3>
-        <p className="modalsuccess_description">
+        </figure> 
+        <h3 className="modalsuccess_title" tabIndex="0">{modalSuccessInfo.title}</h3>
+        <p className="modalsuccess_description" tabIndex="0">
           {modalSuccessInfo.description}
         </p>
         <button
