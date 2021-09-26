@@ -31,8 +31,16 @@ const Pledge = () => {
             key={nanoid()}
             htmlFor={pledge.title}
             border={pledge.title === selection ? true : false}
+            disabled={pledge.daysLeft === 0 ? false : true}
           >
-            <section className="pledge_body">
+            <section
+              className={`pledge_body ${
+                pledge.daysLeft !== "0"
+                  ? ""
+                  : "disabled"
+              }`}
+              disabled={pledge.daysLeft === 0 ? false : true}
+            >
               <div className="pledge_header">
                 <input
                   id={pledge.title}
@@ -52,6 +60,7 @@ const Pledge = () => {
                         ? "pledge_title"
                         : "pledge_title-disabled"
                     }
+                    tabIndex={pledge.daysLeft === "0" ? "-1" : "0"}
                   >
                     {pledge.title}
                   </h3>
@@ -62,6 +71,7 @@ const Pledge = () => {
                           ? "pledge_subtitle"
                           : "pledge_subtitle-disabled"
                       }
+                      tabIndex={pledge.daysLeft === "0" ? "-1" : "0"}
                     >
                       {pledge.subtitle}
                     </h4>
@@ -74,6 +84,7 @@ const Pledge = () => {
                     ? "pledge_description"
                     : "pledge_description-disabled"
                 }
+                tabIndex={pledge.daysLeft === "0" ? "-1" : "0"}
               >
                 {pledge.description}
               </p>
@@ -85,6 +96,7 @@ const Pledge = () => {
                         ? "pledge_daysleft"
                         : "pledge_daysleft-disabled"
                     }
+                    tabIndex={pledge.daysLeft === "0" ? "-1" : "0"}
                   >
                     {pledge.daysLeft}
                   </span>
@@ -94,6 +106,7 @@ const Pledge = () => {
                         ? "availability_text"
                         : "availability_text-disabled"
                     }
+                    tabIndex={pledge.daysLeft === "0" ? "-1" : "0"}
                   >
                     left
                   </p>
@@ -102,13 +115,19 @@ const Pledge = () => {
             </section>
             {pledge.end.length > 0 && pledge.title === selection && (
               <section className="pledge_footer">
-                <h3 className="footer_title-pledge">{pledge.end[0]}</h3>
+                <h3
+                  className="footer_title-pledge"
+                  tabIndex={pledge.daysLeft === "0" ? "-1" : "0"}
+                >
+                  {pledge.end[0]}
+                </h3>
                 <div className="footer_fields">
                   <input
                     className="fields_amount-pledge"
                     type="number"
                     placeholder={`$ ${pledge.end[1]}`}
                     min={pledge.end[1]}
+                    tabIndex={pledge.daysLeft === "0" ? "-1" : "0"}
                     aria-label="Enter the amount of money to donate."
                     required
                   />
@@ -116,6 +135,7 @@ const Pledge = () => {
                     className="fields_button-pledge"
                     type="button"
                     onClick={handleClickSupport}
+                    tabIndex={pledge.daysLeft === "0" ? "-1" : "0"}
                   >
                     {pledge.end[2]}
                   </button>

@@ -13,6 +13,7 @@ import Pledge from "./Pledge";
 
 const ModalDefault = () => {
   const [ hover, setHover ] = useState(false);
+  const [ focus, setFocus] = useState(false);
 
   const modalStart = useRef(null);
 
@@ -36,6 +37,14 @@ const ModalDefault = () => {
     setHover(false);
   }
 
+  const handleOnFocus = () => {
+    setFocus(true);
+  };
+
+  const handleOnBlur = () => {
+    setFocus(false);
+  };
+
   return (
     <ModalDefaultContainer>
       <main className="modaldefault">
@@ -46,11 +55,13 @@ const ModalDefault = () => {
           <figure className="modaldefault_container-image">
             <img
               className="modaldefault_image"
-              src={hover ? closeIconBlack : closeIcon}
+              src={(focus || hover) ? closeIconBlack : closeIcon}
               alt="Press enter to close the modal"
               onClick={handleClosingClick}
               onMouseEnter={handleHoverIn}
               onMouseLeave={handleHoverOut}
+              onFocus={handleOnFocus}
+              onBlur={handleOnBlur}
               tabIndex="0"
             />
           </figure>

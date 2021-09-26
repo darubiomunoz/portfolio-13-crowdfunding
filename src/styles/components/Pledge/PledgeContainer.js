@@ -9,6 +9,7 @@ const PledgeContainer = styled.label`
   box-shadow: ${boxShadow};
   border: ${(props) =>
     props.border ? `0.2rem solid ${colorOption1}` : `none`};
+  cursor: ${(props) => (props.disabled ? "pointer" : "default")};
 
   .pledge_body {
     padding: ${spacingSmall};
@@ -16,6 +17,7 @@ const PledgeContainer = styled.label`
     flex-direction: column;
     row-gap: ${spacingSmall};
     position: relative;
+    cursor: ${(props) => (props.disabled ? "pointer" : "default")};
 
     @media ${device.width480} {
       row-gap: ${spacingRegular};
@@ -150,6 +152,10 @@ const PledgeContainer = styled.label`
     }
   }
 
+  .disabled {
+    cursor: default;
+  }
+
   .disappear {
     display: none;
   }
@@ -211,7 +217,8 @@ const PledgeContainer = styled.label`
         color: ${colorOption5};
         cursor: pointer;
 
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: ${colorOption2};
         }
 
