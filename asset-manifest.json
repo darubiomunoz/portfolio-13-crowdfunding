@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/portfolio-13-crowdfunding/static/js/main.eb89c1cc.chunk.js",
-    "main.js.map": "/portfolio-13-crowdfunding/static/js/main.eb89c1cc.chunk.js.map",
+    "main.js": "/portfolio-13-crowdfunding/static/js/main.392e4525.chunk.js",
+    "main.js.map": "/portfolio-13-crowdfunding/static/js/main.392e4525.chunk.js.map",
     "runtime-main.js": "/portfolio-13-crowdfunding/static/js/runtime-main.9994c615.js",
     "runtime-main.js.map": "/portfolio-13-crowdfunding/static/js/runtime-main.9994c615.js.map",
-    "static/js/2.f0f6bebc.chunk.js": "/portfolio-13-crowdfunding/static/js/2.f0f6bebc.chunk.js",
-    "static/js/2.f0f6bebc.chunk.js.map": "/portfolio-13-crowdfunding/static/js/2.f0f6bebc.chunk.js.map",
+    "static/js/2.fbd90e5d.chunk.js": "/portfolio-13-crowdfunding/static/js/2.fbd90e5d.chunk.js",
+    "static/js/2.fbd90e5d.chunk.js.map": "/portfolio-13-crowdfunding/static/js/2.fbd90e5d.chunk.js.map",
     "index.html": "/portfolio-13-crowdfunding/index.html",
-    "static/js/2.f0f6bebc.chunk.js.LICENSE.txt": "/portfolio-13-crowdfunding/static/js/2.f0f6bebc.chunk.js.LICENSE.txt",
+    "static/js/2.fbd90e5d.chunk.js.LICENSE.txt": "/portfolio-13-crowdfunding/static/js/2.fbd90e5d.chunk.js.LICENSE.txt",
     "static/media/icon-bookmark.7777f8ec.svg": "/portfolio-13-crowdfunding/static/media/icon-bookmark.7777f8ec.svg",
     "static/media/icon-bookmarked.74b3b1a9.svg": "/portfolio-13-crowdfunding/static/media/icon-bookmarked.74b3b1a9.svg",
     "static/media/icon-check.bdee5269.svg": "/portfolio-13-crowdfunding/static/media/icon-check.bdee5269.svg",
@@ -20,7 +20,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9994c615.js",
-    "static/js/2.f0f6bebc.chunk.js",
-    "static/js/main.eb89c1cc.chunk.js"
+    "static/js/2.fbd90e5d.chunk.js",
+    "static/js/main.392e4525.chunk.js"
   ]
 }
