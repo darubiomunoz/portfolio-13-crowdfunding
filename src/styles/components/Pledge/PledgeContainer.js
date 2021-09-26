@@ -42,7 +42,8 @@ const PledgeContainer = styled.label`
           font-weight: ${fontWeightBold};
           cursor: pointer;
 
-          &:hover {
+          &:hover,
+          &:focus {
             color: ${colorOption2};
           }
 
