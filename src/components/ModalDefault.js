@@ -45,6 +45,10 @@ const ModalDefault = () => {
     setFocus(false);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.charCode === 13) dispatch(closeDefault());
+  }
+
   return (
     <ModalDefaultContainer>
       <main className="modaldefault">
@@ -55,13 +59,14 @@ const ModalDefault = () => {
           <figure className="modaldefault_container-image">
             <img
               className="modaldefault_image"
-              src={(focus || hover) ? closeIconBlack : closeIcon}
+              src={focus || hover ? closeIconBlack : closeIcon}
               alt="Press enter to close the modal"
               onClick={handleClosingClick}
               onMouseEnter={handleHoverIn}
               onMouseLeave={handleHoverOut}
               onFocus={handleOnFocus}
               onBlur={handleOnBlur}
+              onKeyPress={handleKeyPress}
               tabIndex="0"
             />
           </figure>
